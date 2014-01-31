@@ -39,6 +39,10 @@ describe('API', function() {
 			test('lat');
 			test('lng');
 			test('long');
+			test('ip');
+			test('company_name');
+			test('integer');
+			test('double');
 		});
 	});
 

@@ -11,20 +11,25 @@ var define = casual.define = function(name, generator) {
 	}
 };
 
-define('name', require('./generators/name'));
-define('firstname', require('./generators/firstname'));
-define('lastname', require('./generators/lastname'));
-define('email', require('./generators/email'));
+// Text
+
 define('domain', require('./generators/domain'));
 define('title', require('./generators/sentence'));
 define('sentence', require('./generators/sentence'));
 define('text', require('./generators/text'));
 define('description', require('./generators/text'));
 define('short_description', require('./generators/sentence'));
-define('password', require('./generators/password'));
-define('integer', require('./generators/integer'));
 
-// Address stuff
+// User-related
+
+define('name', require('./generators/name'));
+define('email', require('./generators/email'));
+define('firstname', require('./generators/firstname'));
+define('lastname', require('./generators/lastname'));
+define('password', require('./generators/password'));
+define('phone', require('./generators/phone'));
+
+// Address
 
 define('zip', require('./generators/zip'));
 define('city', require('./generators/city'));
@@ -38,5 +43,11 @@ define('longitude', require('./generators/longitude'));
 define('lat', require('./generators/latitude'));
 define('lng', require('./generators/longitude'));
 define('long', require('./generators/longitude'));
+
+// Stuff
+define('ip', require('./generators/ip'));
+define('company_name', require('./generators/company_name'));
+define('integer', require('./generators/integer'));
+define('double', require('./generators/double'))
 
 module.exports = casual;
