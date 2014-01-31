@@ -16,6 +16,8 @@ describe('Faker API', function() {
 			test('sentence');
 			test('title');
 			test('email');
+			test('city');
+			test('text');
 		});
 	});
 });

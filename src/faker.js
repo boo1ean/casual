@@ -10,5 +10,7 @@ define('email', require('./generators/email'));
 define('domain', require('./generators/domain'));
 define('title', require('./generators/sentence'));
 define('sentence', require('./generators/sentence'));
+define('city', require('./generators/city'));
+define('text', require('./generators/text'));
 
 module.exports = faker;
