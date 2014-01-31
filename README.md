@@ -37,21 +37,36 @@ Casual uses javascript properties for common generators so you don't need to use
 
 ## Available generators
 
-Don't require any arguments and should be called as `casual.name`:
-
-- name
-- firstname
-- lastname
-- domain
-- sentence
-- title
-- email
-- city
-- text
-
-Do require some arguments and should be called as `casual.integer(-5, 10)`:
-
-- integer
+```javascript
+casual.name              // Miracle.Stoltenberg
+casual.firstname         // Willard
+casual.lastname          // Breitenberg
+casual.domain            // avery.com
+casual.sentence          // iusto numquam voluptates sapiente ut hic nostrum modi
+casual.title             // et possimus rem quibusdam quod repellat magni sed autem
+casual.email             // Morris_Flatley@norberto.com
+casual.city              // Marksville
+casual.text              // adipisci iste id suscipit amet laudantium eum at tenetur impedit...
+casual.password          // laboriosam quia sit dolorem doloribus et inventore possimus aut
+casual.description       // doloribus non velit dolore aliquid omnis err...
+casual.short_description // doloremque omnis blanditiis officia maxime
+casual.zip               // 63235
+casual.street            // Monahan Tunnel
+casual.address           // 618 Huels Dam Suite 859
+casual.address1          // 85818 Ondricka Rest
+casual.address2          // Suite 086
+casual.state             // Connecticut
+casual.latitude          // 70.0007
+casual.longitude         // 149.6702
+casual.lat               // 20.2150
+casual.lng               // 53.6056
+casual.long              // -65.9813
+casual.ip                // 39.68.84.100
+casual.company_name      // Wisozk, Kshlerin and Weber
+casual.integer()         // 54
+casual.double()          // 23.918293
+casual.country           // Northern Ireland
+```
 
 ## Custom generators
 

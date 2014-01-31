@@ -10,6 +10,8 @@ describe('API', function() {
 			var second = casual[name];
 		}
 
+		console.log(name, '|', first);
+
 		first.should.not.be.equal(second);
 	};
 
@@ -27,7 +29,6 @@ describe('API', function() {
 			test('password');
 			test('description');
 			test('short_description');
-			test('integer');
 			test('zip');
 			test('street');
 			test('address');
