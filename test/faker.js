@@ -18,6 +18,7 @@ describe('Faker API', function() {
 			test('email');
 			test('city');
 			test('text');
+			test('password');
 		});
 	});
 });

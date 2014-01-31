@@ -12,5 +12,6 @@ define('title', require('./generators/sentence'));
 define('sentence', require('./generators/sentence'));
 define('city', require('./generators/city'));
 define('text', require('./generators/text'));
+define('password', require('./generators/password'));
 
 module.exports = faker;
