@@ -1,6 +1,14 @@
-var faker = {};
-var define = faker.define = function(name, generator) {
-	faker.__defineGetter__(name, generator);
+var casual = {};
+var define = casual.define = function(name, generator) {
+	if (typeof generator != 'function') {
+		throw new Error('Casual generator must be defined by function');
+	}
+
+	if (generator.length) {
+		casual[name] = generator;
+	} else {
+		casual.__defineGetter__(name, generator);
+	}
 };
 
 define('name', require('./generators/name'));
@@ -16,4 +24,4 @@ define('description', require('./generators/text'));
 define('short_description', require('./generators/sentence'));
 define('password', require('./generators/password'));
 
-module.exports = faker;
+module.exports = casual;

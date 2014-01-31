@@ -1,4 +1,4 @@
-# NOTE: MODULE IS UNDER CONSTRUCTION
+## WARNING: MODULE IS UNDER CONSTRUCTION
 
 ## Neat fake data generator [![Build Status](https://travis-ci.org/boo1ean/casual.png?branch=master)](https://travis-ci.org/boo1ean/casual)
 
@@ -26,15 +26,17 @@ Casual uses javascript properties for common generators so you don't need to use
 
 ## List of available generators
 
-	name
-	firstname
-	lastname
-	domain
-	sentence
-	title
-	email
-	city
-	text
+Property generators: 
+
+- name
+- firstname
+- lastname
+- domain
+- sentence
+- title
+- email
+- city
+- text
 
 # License
 
