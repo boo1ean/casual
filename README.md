@@ -38,6 +38,40 @@ Property generators:
 - city
 - text
 
+## Custom generators
+
+```javascript
+casual.define('user', function() {
+	return {
+		email: casual.email,
+		firstname: casual.firstname,
+		lastname: casual.lastname,
+		password: casual.password
+	};
+});
+
+// Generate object with randomly generated fields
+var user = casual.user;
+```
+
+If you want to pass some params to your generator:
+
+```javascript
+casual.define('profile', function(type) {
+	return {
+		title: casual.title,
+		description: casual.description,
+		type: type || 'private'
+	};
+});
+
+// Generate object with random data
+var profile = casual.profile('public');
+```
+
+NOTE: if getter function has non-empty arguments list then generator should be called as function `casual.profile('public')`,
+otherwise it should be accessed as property `casual.profile`.
+
 # License
 
 The MIT License (MIT)
