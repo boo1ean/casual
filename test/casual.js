@@ -2,8 +2,14 @@ var casual = require('../');
 
 describe('API', function() {
 	var test = function(name) {
-		var first = casual[name];
-		var second = casual[name];
+		if (typeof casual[name] === 'function') {
+			var first = casual[name]();
+			var second = casual[name]();
+		} else {
+			var first = casual[name];
+			var second = casual[name];
+		}
+
 		first.should.not.be.equal(second);
 	};
 
@@ -21,6 +27,7 @@ describe('API', function() {
 			test('password');
 			test('description');
 			test('short_description');
+			test('integer');
 		});
 	});
 

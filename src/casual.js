@@ -23,5 +23,6 @@ define('text', require('./generators/text'));
 define('description', require('./generators/text'));
 define('short_description', require('./generators/sentence'));
 define('password', require('./generators/password'));
+define('integer', require('./generators/integer'));
 
 module.exports = casual;

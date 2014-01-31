@@ -16,17 +16,28 @@ var casual = require('casual');
 // Generate random sentence
 var sentence = casual.sentence;
 
-// Generates random city name
+// Generate random city name
 var city = casual.city;
+
+// Define custom generator
+casual.define('point', function() {
+	return {
+		x: Math.random(),
+		y: Math.random()
+	};
+});
+
+// Generate random point
+var point = casual.point;
 
 // And so on..
 ```
 
 Casual uses javascript properties for common generators so you don't need to use function call operator
 
-## List of available generators
+## Available generators
 
-Property generators: 
+Don't require any arguments and should be called as `casual.name`:
 
 - name
 - firstname
@@ -37,6 +48,10 @@ Property generators:
 - email
 - city
 - text
+
+Do require some arguments and should be called as `casual.integer(-5, 10)`:
+
+- integer
 
 ## Custom generators
 
