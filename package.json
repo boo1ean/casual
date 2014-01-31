@@ -1,6 +1,6 @@
 {
-  "name": "faker",
-  "version": "0.0.0",
+  "name": "casual",
+  "version": "0.0.1",
   "description": "Fake data generator",
   "main": "src/faker.js",
   "scripts": {
@@ -14,5 +14,12 @@
     "generator"
   ],
   "author": "Egor Gumenyuk <boo1ean0807@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "Faker": "~0.5.11"
+  },
+  "devDependencies": {
+    "should": "~3.1.2",
+    "mocha": "~1.17.1"
+  }
 }
