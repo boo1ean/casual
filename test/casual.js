@@ -43,6 +43,7 @@ describe('API', function() {
 			test('company_name');
 			test('integer');
 			test('double');
+			test('country');
 		});
 	});
 

@@ -31,8 +31,9 @@ define('phone', require('./generators/phone'));
 
 // Address
 
-define('zip', require('./generators/zip'));
+define('country', require('./generators/country'));
 define('city', require('./generators/city'));
+define('zip', require('./generators/zip'));
 define('street', require('./generators/street'));
 define('address', require('./generators/address'));
 define('address1', require('./generators/address1'));
