@@ -18,11 +18,25 @@ define('email', require('./generators/email'));
 define('domain', require('./generators/domain'));
 define('title', require('./generators/sentence'));
 define('sentence', require('./generators/sentence'));
-define('city', require('./generators/city'));
 define('text', require('./generators/text'));
 define('description', require('./generators/text'));
 define('short_description', require('./generators/sentence'));
 define('password', require('./generators/password'));
 define('integer', require('./generators/integer'));
+
+// Address stuff
+
+define('zip', require('./generators/zip'));
+define('city', require('./generators/city'));
+define('street', require('./generators/street'));
+define('address', require('./generators/address'));
+define('address1', require('./generators/address1'));
+define('address2', require('./generators/address2'));
+define('state', require('./generators/state'));
+define('latitude', require('./generators/latitude'));
+define('longitude', require('./generators/longitude'));
+define('lat', require('./generators/latitude'));
+define('lng', require('./generators/longitude'));
+define('long', require('./generators/longitude'));
 
 module.exports = casual;

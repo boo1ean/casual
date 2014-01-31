@@ -28,6 +28,17 @@ describe('API', function() {
 			test('description');
 			test('short_description');
 			test('integer');
+			test('zip');
+			test('street');
+			test('address');
+			test('address1');
+			test('address2');
+			test('state');
+			test('latitude');
+			test('longitude');
+			test('lat');
+			test('lng');
+			test('long');
 		});
 	});
 
