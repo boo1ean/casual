@@ -54,12 +54,12 @@ casual.building_number  // 2413
 
 // Text
 
-casual.sentence               // 'laborum eius porro consequatur'
-casual.sentences(n = 3)       // 'dolorum fuga nobis sit natus consequatur laboriosam sapiente natus quos ut'
-casual.title                  // 'systematic'
-casual.text                   // 'nemo tempore natus non accusamus eos placeat nesciunt et fugit ut odio nisi dolore non'
-casual.description            // 'vel et rerum nostrum quia'
-casual.short_description      // 'qui iste similique iusto'
+casual.sentence               // 'Laborum eius porro consequatur.'
+casual.sentences(n = 3)       // 'Dolorum fuga nobis sit natus consequatur. Laboriosam sapiente. Natus quos ut.'
+casual.title                  // 'Systematic nobis'
+casual.text                   // 'Nemo tempore natus non accusamus eos placeat nesciunt. et fugit ut odio nisi dolore non ... (long text)'
+casual.description            // 'Vel et rerum nostrum quia. Dolorum fuga nobis sit natus consequatur.'
+casual.short_description      // 'Qui iste similique iusto.'
 casual.string                 // 'saepe quia molestias voluptates et'
 casual.word                   // 'voluptatem'
 casual.words(n = 7)           // 'sed quis ut beatae id adipisci aut'
