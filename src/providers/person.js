@@ -10,7 +10,7 @@ var catch_phrase_words = [
 	['ability', 'access', 'adapter', 'algorithm', 'alliance', 'analyzer', 'application', 'approach', 'architecture', 'archive', 'artificialintelligence', 'array', 'attitude', 'benchmark', 'budgetarymanagement', 'capability', 'capacity', 'challenge', 'circuit', 'collaboration', 'complexity', 'concept', 'conglomeration', 'contingency', 'core', 'customerloyalty', 'database', 'data-warehouse', 'definition', 'emulation', 'encoding', 'encryption', 'extranet', 'firmware', 'flexibility', 'focusgroup', 'forecast', 'frame', 'framework', 'function', 'functionalities', 'GraphicInterface', 'groupware', 'GraphicalUserInterface', 'hardware', 'help-desk', 'hierarchy', 'hub', 'implementation', 'info-mediaries', 'infrastructure', 'initiative', 'installation', 'instructionset', 'interface', 'internetsolution', 'intranet', 'knowledgeuser', 'knowledgebase', 'localareanetwork', 'leverage', 'matrices', 'matrix', 'methodology', 'middleware', 'migration', 'model', 'moderator', 'monitoring', 'moratorium', 'neural-net', 'openarchitecture', 'opensystem', 'orchestration', 'paradigm', 'parallelism', 'policy', 'portal', 'pricingstructure', 'processimprovement', 'product', 'productivity', 'project', 'projection', 'protocol', 'securedline', 'service-desk', 'software', 'solution', 'standardization', 'strategy', 'structure', 'success', 'superstructure', 'support', 'synergy', 'systemengine', 'task-force', 'throughput', 'time-frame', 'toolset', 'utilisation', 'website', 'workforce']
 ];
 
-module.exports = {
+var provider = {
 	name: function() {
 		return faker.Internet.userName();
 	},
@@ -19,11 +19,15 @@ module.exports = {
 		return faker.Internet.userName();
 	},
 
-	firstname: function() {
+	full_name: function() {
+		return provider.first_name() + ' ' + provider.last_name();
+	},
+
+	first_name: function() {
 		return faker.Name.firstName();
 	},
 
-	lastname: function() {
+	last_name: function() {
 		return faker.Name.lastName();
 	},
 
@@ -56,4 +60,6 @@ module.exports = {
 
         return result.join(' ');
 	}
-}
+};
+
+module.exports = provider;
