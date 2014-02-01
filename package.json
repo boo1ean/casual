@@ -1,6 +1,6 @@
 {
   "name": "casual",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Neat fake data generator",
   "main": "src/casual.js",
   "scripts": {
@@ -19,7 +19,6 @@
   "author": "Egor Gumenyuk <boo1ean0807@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "Faker": "~0.5.11",
     "moment": "~2.5.1"
   },
   "devDependencies": {
