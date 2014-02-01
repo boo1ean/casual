@@ -2,32 +2,24 @@ var casual = require('../');
 
 describe('API', function() {
 	var test = function(name) {
-		if (typeof casual[name] === 'function') {
-			var first = casual[name]();
-			var second = casual[name]();
-		} else {
-			var first = casual[name];
-			var second = casual[name];
-		}
+		it('casual.' + name + ' should be ok', function() {
+			if (typeof casual[name] === 'function') {
+				var first = casual[name]();
+				var second = casual[name]();
+			} else {
+				var first = casual[name];
+				var second = casual[name];
+			}
 
-		first.should.not.be.equal(second);
+			first.should.not.be.equal(second);
+		});
 	};
 
 	describe('Common generators', function() {
-		it('Should work pretty well', function() {
-			test('name');
-			test('firstname');
-			test('lastname');
-			test('domain');
-			test('sentence');
-			test('title');
-			test('email');
-			test('city');
-			test('text');
-			test('password');
-			test('description');
-			test('short_description');
+
+		describe('Address address provider', function() {
 			test('zip');
+			test('city');
 			test('street');
 			test('address');
 			test('address1');
@@ -38,11 +30,29 @@ describe('API', function() {
 			test('lat');
 			test('lng');
 			test('long');
+			test('country');
+		});
+
+		describe('Text provider', function() {
+			test('sentence');
+			test('title');
+			test('email');
+			test('text');
+			test('description');
+			test('short_description');
+			test('string');
+		});
+
+		it('Should work pretty well', function() {
+			test('name');
+			test('firstname');
+			test('lastname');
+			test('domain');
+			test('password');
 			test('ip');
 			test('company_name');
 			test('integer');
 			test('double');
-			test('country');
 		});
 	});
 

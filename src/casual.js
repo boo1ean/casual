@@ -17,13 +17,13 @@ casual.random_element = function(array) {
 };
 
 // Text
-
-define('domain', require('./generators/domain'));
-define('title', require('./generators/sentence'));
-define('sentence', require('./generators/sentence'));
-define('text', require('./generators/text'));
-define('description', require('./generators/text'));
-define('short_description', require('./generators/sentence'));
+var text = require('./providers/text');
+define('title', text.title);
+define('sentence', text.sentence);
+define('text', text.text);
+define('description', text.description);
+define('short_description', text.short_description);
+define('string', text.string);
 
 // User-related
 
@@ -51,6 +51,7 @@ define('lng', address.longitude);
 define('long', address.longitude);
 
 // Stuff
+define('domain', require('./generators/domain'));
 define('ip', require('./generators/ip'));
 define('company_name', require('./generators/company_name'));
 define('integer', require('./generators/integer'));
