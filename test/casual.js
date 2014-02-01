@@ -10,8 +10,6 @@ describe('API', function() {
 			var second = casual[name];
 		}
 
-		console.log(name, '|', first);
-
 		first.should.not.be.equal(second);
 	};
 
@@ -64,5 +62,15 @@ describe('API', function() {
 
 			casual.x2(3).should.be.equal(6);
 		});
-	})
+	});
+
+	describe('random_element', function() {
+		it('Should pick random element from array', function() {
+			var array = [1,2,3,4,5,23,6,7,8,95,43];
+			var first = casual.random_element(array);
+			var second = casual.random_element(array);
+
+			first.should.not.be.equal(second);
+		});
+	});
 });

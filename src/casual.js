@@ -11,6 +11,11 @@ var define = casual.define = function(name, generator) {
 	}
 };
 
+casual.random_element = function(array) {
+	var index = casual.integer(0, array.length);
+	return array[index];
+};
+
 // Text
 
 define('domain', require('./generators/domain'));
