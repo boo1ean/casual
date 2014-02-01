@@ -232,6 +232,16 @@ casual.such;        // 'such good'
 casual.doge_phrase; // 'wow such flexible'
 ```
 
+## View providers output cli
+
+There is a simple cli util which could be used to view/debug providers output:
+
+	# Will render table with columns [generator_name, result] for all providers
+	node utils/show.js
+
+	 # Will render table with columns [generator_name, result] only for person provider
+	node utils/show.js person
+
 # License
 
 Heavily inspired by https://github.com/fzaninotto/Faker
