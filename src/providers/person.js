@@ -1,5 +1,10 @@
 var faker = require('Faker'),
-    random_element = require('../helpers').random_element;
+    helpers = require('../helpers');
+
+var random_element = helpers.random_element,
+    numerify = helpers.numerify;
+
+var phone_format = '380 ## ### ## ##';
 
 var prefix = ['Mr.', 'Mrs.', 'Ms.', 'Miss', 'Dr.'],
     suffix = ['Jr.', 'Sr.', 'I', 'II', 'III', 'IV', 'V', 'MD', 'DDS', 'PhD', 'DVM'];
@@ -36,7 +41,7 @@ var provider = {
 	},
 
 	phone: function() {
-		return faker.PhoneNumber.phoneNumber();
+		return numerify(phone_format);
 	},
 
 	name_prefix: function() {
