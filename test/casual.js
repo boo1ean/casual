@@ -82,6 +82,10 @@ describe('API', function() {
 		describe('Number generator', function() {
 			test('integer');
 			test('double');
+			test('digit');
+			test('array_of_digits');
+			test('array_of_integers');
+			test('array_of_doubles');
 		});
 
 		describe('Date provider', function() {
