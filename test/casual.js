@@ -47,11 +47,16 @@ describe('API', function() {
 
 		describe('Text provider', function() {
 			test('sentence');
+			test('sentences');
 			test('title');
 			test('text');
 			test('description');
 			test('short_description');
 			test('string');
+			test('word');
+			test('words');
+			test('array_of_words');
+			test('letter');
 		});
 
 		describe('Internet provider', function() {
@@ -138,12 +143,17 @@ describe('API', function() {
 		});
 
 		describe('random_element', function() {
-			it('Should pick random element from array', function() {
+			it('Should pick random element from array', function(done) {
 				var array = [1,2,3,4,5,23,6,7,8,95,43];
-				var first = casual.random_element(array);
-				var second = casual.random_element(array);
+				var pivot = casual.random_element(array);
 
-				first.should.not.be.equal(second);
+				for (var i = 0; i < max_times; ++i) {
+					if (pivot != casual.random_element(array)) {
+						return done();
+					}
+				}
+
+				done('Fail');
 			});
 		});
 
