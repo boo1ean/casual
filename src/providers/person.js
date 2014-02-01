@@ -32,7 +32,7 @@ var provider = {
 		var prefix = random_element([provider.first_name(), provider.last_name()]);
 		var suffix = random_element([provider.first_name(), provider.last_name()]);
 		var glue   = random_element(glues);
-		return join(prefix, glue, suffix);
+		return [prefix, glue, suffix].join('');
 	},
 
 	full_name: function() {
