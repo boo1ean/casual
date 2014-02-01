@@ -36,20 +36,24 @@ describe('API', function() {
 		describe('Text provider', function() {
 			test('sentence');
 			test('title');
-			test('email');
 			test('text');
 			test('description');
 			test('short_description');
 			test('string');
 		});
 
+		describe('Internet provider', function() {
+			test('ip');
+			test('domain');
+			test('url');
+			test('email');
+		});
+
 		it('Should work pretty well', function() {
 			test('name');
 			test('firstname');
 			test('lastname');
-			test('domain');
 			test('password');
-			test('ip');
 			test('company_name');
 			test('integer');
 			test('double');

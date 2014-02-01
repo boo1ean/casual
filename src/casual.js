@@ -28,7 +28,6 @@ define('string', text.string);
 // User-related
 
 define('name', require('./generators/name'));
-define('email', require('./generators/email'));
 define('firstname', require('./generators/firstname'));
 define('lastname', require('./generators/lastname'));
 define('password', require('./generators/password'));
@@ -50,9 +49,13 @@ define('lat', address.latitude);
 define('lng', address.longitude);
 define('long', address.longitude);
 
-// Stuff
-define('domain', require('./generators/domain'));
-define('ip', require('./generators/ip'));
+// Internet
+var internet = require('./providers/internet');
+define('domain', internet.domain)
+define('email', internet.email)
+define('url', internet.url)
+define('ip', internet.ip)
+
 define('company_name', require('./generators/company_name'));
 define('integer', require('./generators/integer'));
 define('double', require('./generators/double'))
