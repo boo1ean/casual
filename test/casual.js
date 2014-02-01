@@ -95,6 +95,12 @@ describe('API', function() {
 			test('timezone');
 		});
 
+		describe('Payment provider', function() {
+			test('card_type');
+			test('card_number');
+			test('card_exp');
+			test('card_data');
+		});
 	});
 
 	describe('Casual helpers', function() {
