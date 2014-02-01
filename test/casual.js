@@ -55,6 +55,8 @@ describe('API', function() {
 			test('lastname');
 			test('password');
 			test('company_name');
+			test('name_prefix');
+			test('name_suffix');
 		});
 
 		describe('Number generator', function() {
