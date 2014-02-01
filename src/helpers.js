@@ -8,6 +8,15 @@ var random_element = function(array) {
 	return array[index];
 };
 
+var random_key = function(object) {
+	var keys = Object.keys(object);
+	return random_element(keys);
+};
+
+var random_value = function(object) {
+	return object[random_key(object)];
+};
+
 var register_provider = function(provider) {
 	for (var i in provider) {
 		this.define(i, provider[i]);
@@ -40,6 +49,8 @@ var numerify = function(format) {
 
 module.exports = {
 	random_element: random_element,
+	random_value: random_value,
+	random_key: random_key,
 	register_provider: register_provider,
 	extend: extend,
 	define: define,
