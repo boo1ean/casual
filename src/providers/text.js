@@ -90,7 +90,7 @@ var provider = {
 	},
 
 	array_of_words: function(n) {
-		n = n || 10;
+		n = n || 7;
 		var result = [];
 
 		for (var i = 0; i < n; ++i) {

@@ -39,7 +39,7 @@ var provider = {
 	},
 
 	day_of_month: function() {
-		return provider.moment().format('DD');
+		return provider.moment().format('D');
 	},
 
 	day_of_week: function() {
@@ -47,7 +47,7 @@ var provider = {
 	},
 
 	month_number: function() {
-		return provider.moment().format('MM');
+		return provider.moment().format('M');
 	},
 
 	month_name: function() {
