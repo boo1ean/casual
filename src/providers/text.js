@@ -1,7 +1,8 @@
-var faker = require('Faker'),
-    helpers = require('../helpers');
+var helpers = require('../helpers')
+    integer = require('./number').integer;
 
-var random_element = helpers.random_element;
+var random_element = helpers.random_element,
+    join = helpers.join;
 
 var words = [
 	'alias', 'consequatur', 'aut', 'perferendis', 'sit', 'voluptatem',
@@ -45,29 +46,33 @@ var words = [
 
 var letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
 
+var first_letter_up = function(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
 var provider = {
 	title: function() {
-		return faker.random.catch_phrase_descriptor();
+		return first_letter_up(provider.words(integer(2, 3)));
 	},
 
 	sentence: function() {
-		return faker.Lorem.sentence();
+		return first_letter_up(provider.words(integer(3, 10))) + '.';
 	},
 
 	text: function() {
-		return faker.Lorem.paragraphs();
+		return provider.sentences(integer(3, 6));
 	},
 
 	description: function() {
-		return faker.Lorem.paragraphs();
+		return provider.sentences(integer(2, 5));
 	},
 
 	short_description: function() {
-		return faker.Lorem.sentence();
+		return provider.sentence();
 	},
 
 	string: function() {
-		return faker.Lorem.sentence();
+		return provider.words();
 	},
 
 	sentences: function(n) {
