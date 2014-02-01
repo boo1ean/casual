@@ -106,6 +106,8 @@ describe('API', function() {
 			test('country_code');
 			test('language_code');
 			test('locale');
+			test('mime_type');
+			test('file_extension');
 		});
 	});
 
