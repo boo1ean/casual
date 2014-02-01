@@ -33,6 +33,7 @@ describe('API', function() {
 			test('address1');
 			test('address2');
 			test('state');
+			test('state_abbr');
 			test('latitude');
 			test('longitude');
 			test('lat');
