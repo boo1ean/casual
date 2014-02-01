@@ -39,21 +39,18 @@ Casual uses javascript properties for common generators so you don't need to use
 
 // Address
 
-casual.zip              // '33894-7000'
-casual.city             // 'New Sydneeton'
-casual.street           // 'Sydni Trail'
-casual.address          // '1547 Reid Centers Suite 022'
-casual.address1         // '012 Obie Walks'
-casual.address2         // 'Suite 657'
-casual.state            // 'Montana'
-casual.state_abbr       // 'MA'
-casual.latitude         // -0.5006
-casual.longitude        // -56.1632
-casual.lat              // -77.4857
-casual.lng              // 31.9197
-casual.long             // 128.8257
-casual.country          // 'Wales'
-casual.building_number  // 4480
+casual.country          // 'United Kingdom'
+casual.city             // 'New Ortiz chester'
+casual.zip              // '26995'
+casual.street           // 'Jadyn Islands'
+casual.address          // '6390 Tremblay Pines Suite 784'
+casual.address1         // '8417 Veda Circles'
+casual.address2         // 'Suite 648'
+casual.state            // 'Michigan'
+casual.state_abbr       // 'CO'
+casual.latitude         // 90.0610
+casual.longitude        // 180.0778
+casual.building_number  // 2413
 
 // Text
 
@@ -78,17 +75,18 @@ casual.email   // 'Josue.Hessel@claire.us'
 
 // Person
 
-casual.name          // 'Alberto'
-casual.username      // 'Darryl'
-casual.first_name    // 'Derek'
-casual.last_name     // 'Considine'
-casual.full_name     // 'Kadin Torphy'
-casual.password      // '(205)580-1380Schumm'
-casual.name_prefix   // 'Miss'
-casual.name_suffix   // 'Jr.'
-casual.company_name  // 'Cole, Wuckert and Strosin'
-casual.catch_phrase  // 'Synchronised optimal concept'
-casual.phone         // '380 82 790 25 92'
+casual.name            // 'Alberto'
+casual.username        // 'Darryl'
+casual.first_name      // 'Derek'
+casual.last_name       // 'Considine'
+casual.full_name       // 'Kadin Torphy'
+casual.password        // '(205)580-1380Schumm'
+casual.name_prefix     // 'Miss'
+casual.name_suffix     // 'Jr.'
+casual.company_name    // 'Cole, Wuckert and Strosin'
+casual.company_suffix  // 'Inc'
+casual.catch_phrase    // 'Synchronised optimal concept'
+casual.phone           // '380 82 790 25 92'
 
 // Numbers
 
