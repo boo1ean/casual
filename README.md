@@ -1,8 +1,4 @@
-## WARNING: MODULE IS UNDER CONSTRUCTION
-
 ## Neat fake data generator [![Build Status](https://travis-ci.org/boo1ean/casual.png?branch=master)](https://travis-ci.org/boo1ean/casual)
-
-Better [faker](https://github.com/Marak/Faker.js) api.
 
 ## Installation
 
@@ -87,9 +83,10 @@ casual.last_name     // 'Considine'
 casual.full_name     // 'Kadin Torphy'
 casual.password      // '(205)580-1380Schumm'
 casual.name_prefix   // 'Miss'
-casual.name_suffix   // 'Mr.'
+casual.name_suffix   // 'Jr.'
 casual.company_name  // 'Cole, Wuckert and Strosin'
 casual.catch_phrase  // 'Synchronised optimal concept'
+casual.phone         // '380 82 790 25 92'
 
 // Numbers
 
@@ -118,7 +115,7 @@ casual.timezone                     // 'America/Miquelon'
 // Payments
 
 casual.card_type            // 'American Express'
-casual.card_number(vendor)  // '4716506247152101'
+casual.card_number(vendor)  // '4716506247152101' (if no vendor specified then random)
 casual.card_exp             // '03/04'
 casual.card_data            // { type: 'MasterCard', number: '5307558778577046', exp: '04/88', holder_name: 'Jaron Gibson' }
 
@@ -172,7 +169,72 @@ var profile = casual.profile('public');
 NOTE: if getter function has non-empty arguments list then generator should be called as function `casual.profile('public')`,
 otherwise it should be accessed as property `casual.profile`.
 
+## Helpers
+
+#### random_element
+
+Get random array element
+
+```javascript
+var item = casual.random_element(['ball', 'clock', 'table']);
+```
+
+#### random_value
+
+Extract random object value
+
+```javascript
+var val = casual.random_value({ a: 1, b: 3, c: 42 });
+// val will be equal 1 or 3 or 42
+```
+
+#### random_key
+
+Extract random object key
+
+```javascript
+var val = casual.random_key({ a: 1, b: 3, c: 42 });
+// val will be equal 'a' or 'b' or ;c'
+```
+
+#### numerify
+
+Replace all `#` in string with digits
+
+```javascript
+var format = '(##)-00-###-##';
+casual.numerify(format); // '(10)-00-843-32'
+```
+
+#### define
+
+See custom generators
+
+#### register_provider
+
+Register generators provider
+
+```javascript
+var words = ['flexible', 'great', 'ok', 'good'];
+var doge_provider = {
+	such: function() {
+		return 'such ' + casual.random_element(words);
+	},
+
+	doge_phrase: function() {
+		return 'wow ' + provider.such();
+	}
+};
+
+casual.register_provider(doge_provider);
+
+casual.such;        // 'such good'
+casual.doge_phrase; // 'wow such flexible'
+```
+
 # License
+
+Heavily inspired by https://github.com/fzaninotto/Faker
 
 The MIT License (MIT)
 Copyright (c) 2014 Egor Gumenyuk <boo1ean0807@gmail.com>
