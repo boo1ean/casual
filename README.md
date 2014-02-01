@@ -196,7 +196,7 @@ Extract random object key
 
 ```javascript
 var val = casual.random_key({ a: 1, b: 3, c: 42 });
-// val will be equal 'a' or 'b' or ;c'
+// val will be equal 'a' or 'b' or 'c'
 ```
 
 #### numerify
