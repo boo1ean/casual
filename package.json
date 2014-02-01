@@ -16,7 +16,8 @@
   "author": "Egor Gumenyuk <boo1ean0807@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "Faker": "~0.5.11"
+    "Faker": "~0.5.11",
+    "moment": "~2.5.1"
   },
   "devDependencies": {
     "should": "~3.1.2",

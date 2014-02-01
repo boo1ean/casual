@@ -75,6 +75,22 @@ describe('API', function() {
 			test('integer');
 			test('double');
 		});
+
+		describe('Date provider', function() {
+			test('unix_time');
+			test('moment');
+			test('date');
+			test('time');
+			test('century');
+			test('am_pm');
+			test('day_of_year');
+			test('day_of_month');
+			test('day_of_week');
+			test('month_number');
+			test('month_name');
+			test('year');
+			test('timezone');
+		});
 	});
 
 	describe('Casual helpers', function() {
