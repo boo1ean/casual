@@ -38,9 +38,6 @@ describe('API', function() {
 			test('state_abbr');
 			test('latitude');
 			test('longitude');
-			test('lat');
-			test('lng');
-			test('long');
 			test('country');
 			test('building_number');
 		});
@@ -207,6 +204,12 @@ describe('API', function() {
 
 				casual.really_custom_generator.should.be.equal('custom');
 			});
+		});
+
+		describe('join', function() {
+			it('Should join strings with space like a boss', function() {
+				casual.join('wow', 'such', 'sentence').should.be.equal('wow such sentence');
+			})
 		});
 	});
 });

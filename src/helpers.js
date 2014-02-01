@@ -47,6 +47,11 @@ var numerify = function(format) {
 	return format.replace(/#/g, digit);
 };
 
+var join = function() {
+	var tokens = Array.prototype.slice.apply(arguments);
+	return tokens.filter(Boolean).join(' ');
+};
+
 module.exports = {
 	random_element: random_element,
 	random_value: random_value,
@@ -54,5 +59,6 @@ module.exports = {
 	register_provider: register_provider,
 	extend: extend,
 	define: define,
-	numerify: numerify
+	numerify: numerify,
+	join: join
 };
