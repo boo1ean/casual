@@ -38,34 +38,104 @@ Casual uses javascript properties for common generators so you don't need to use
 ## Available generators
 
 ```javascript
-casual.name              // Miracle.Stoltenberg
-casual.firstname         // Willard
-casual.lastname          // Breitenberg
-casual.domain            // avery.com
-casual.sentence          // iusto numquam voluptates sapiente ut hic nostrum modi
-casual.title             // et possimus rem quibusdam quod repellat magni sed autem
-casual.email             // Morris_Flatley@norberto.com
-casual.city              // Marksville
-casual.text              // adipisci iste id suscipit amet laudantium eum at tenetur impedit...
-casual.password          // laboriosam quia sit dolorem doloribus et inventore possimus aut
-casual.description       // doloribus non velit dolore aliquid omnis err...
-casual.short_description // doloremque omnis blanditiis officia maxime
-casual.zip               // 63235
-casual.street            // Monahan Tunnel
-casual.address           // 618 Huels Dam Suite 859
-casual.address1          // 85818 Ondricka Rest
-casual.address2          // Suite 086
-casual.state             // Connecticut
-casual.latitude          // 70.0007
-casual.longitude         // 149.6702
-casual.lat               // 20.2150
-casual.lng               // 53.6056
-casual.long              // -65.9813
-casual.ip                // 39.68.84.100
-casual.company_name      // Wisozk, Kshlerin and Weber
-casual.integer()         // 54
-casual.double()          // 23.918293
-casual.country           // Northern Ireland
+
+// Address
+
+casual.zip              // '33894-7000'
+casual.city             // 'New Sydneeton'
+casual.street           // 'Sydni Trail'
+casual.address          // '1547 Reid Centers Suite 022'
+casual.address1         // '012 Obie Walks'
+casual.address2         // 'Suite 657'
+casual.state            // 'Montana'
+casual.state_abbr       // 'MA'
+casual.latitude         // -0.5006
+casual.longitude        // -56.1632
+casual.lat              // -77.4857
+casual.lng              // 31.9197
+casual.long             // 128.8257
+casual.country          // 'Wales'
+casual.building_number  // 4480
+
+// Text
+
+casual.sentence               // 'laborum eius porro consequatur'
+casual.sentences(n = 3)       // 'dolorum fuga nobis sit natus consequatur laboriosam sapiente natus quos ut'
+casual.title                  // 'systematic'
+casual.text                   // 'nemo tempore natus non accusamus eos placeat nesciunt et fugit ut odio nisi dolore non'
+casual.description            // 'vel et rerum nostrum quia'
+casual.short_description      // 'qui iste similique iusto'
+casual.string                 // 'saepe quia molestias voluptates et'
+casual.word                   // 'voluptatem'
+casual.words(n = 7)           // 'sed quis ut beatae id adipisci aut'
+casual.array_of_words(n = 7)  // [ 'voluptas', 'atque', 'vitae', 'vel', 'dolor', 'saepe', 'ut' ]
+casual.letter                 // 'k'
+
+// Internet
+
+casual.ip      // '21.44.122.149'
+casual.domain  // 'darrion.us'
+casual.url     // 'germaine.net'
+casual.email   // 'Josue.Hessel@claire.us'
+
+// Person
+
+casual.name          // 'Alberto'
+casual.username      // 'Darryl'
+casual.first_name    // 'Derek'
+casual.last_name     // 'Considine'
+casual.full_name     // 'Kadin Torphy'
+casual.password      // '(205)580-1380Schumm'
+casual.name_prefix   // 'Miss'
+casual.name_suffix   // 'Mr.'
+casual.company_name  // 'Cole, Wuckert and Strosin'
+casual.catch_phrase  // 'Synchronised optimal concept'
+
+// Numbers
+
+casual.integer(from = -1000, to = 1000)  // 632
+casual.double(from = -1000, to = 1000)   // -234.12987444
+casual.array_of_digits(n = 7)            // [ 4, 8, 3, 1, 7, 6, 6 ]
+casual.array_of_integers(n = 7)          // [ -105, -7, -532, -596, -430, -957, -234 ]
+casual.array_of_doubles(n = 7)           // [ -866.3755785673857, -166.62194719538093, ...]
+
+// Date
+
+casual.unix_time                    // 659897901
+casual.moment                       // moment.js object see http://momentjs.com/docs/
+casual.date(format = 'YYYY-MM-DD')  // '2001-07-06' (see available formatters http://momentjs.com/docs/#/parsing/string-format/)
+casual.time()                       // '03:08:02' (see available formatters http://momentjs.com/docs/#/parsing/string-format/)
+casual.century                      // 'IV'
+casual.am_pm                        // 'am'
+casual.day_of_year                  // 323
+casual.day_of_month                 // 9
+casual.day_of_week                  // 4
+casual.month_number                 // 9
+casual.month_name                   // 'March'
+casual.year                         // 1990
+casual.timezone                     // 'America/Miquelon'
+
+// Payments
+
+casual.card_type            // 'American Express'
+casual.card_number(vendor)  // '4716506247152101'
+casual.card_exp             // '03/04'
+casual.card_data            // { type: 'MasterCard', number: '5307558778577046', exp: '04/88', holder_name: 'Jaron Gibson' }
+
+// Misc
+
+casual.country_code    // 'ES'
+casual.language_code   // 'ru'
+casual.locale          // 'hi_IN'
+casual.mime_type       // 'audio/mpeg'
+casual.file_extension  // 'rtf'
+
+// Colors
+
+casual.color_name       // 'DarkOliveGreen'
+casual.safe_color_name  // 'maroon'
+casual.rgb_hex          // '#2e4e1f'
+casual.rgb_array        // [ 194, 193, 166 ]
 ```
 
 ## Custom generators
@@ -74,8 +144,8 @@ casual.country           // Northern Ireland
 casual.define('user', function() {
 	return {
 		email: casual.email,
-		firstname: casual.firstname,
-		lastname: casual.lastname,
+		firstname: casual.first_name,
+		lastname: casual.last_name,
 		password: casual.password
 	};
 });
