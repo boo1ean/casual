@@ -35,20 +35,20 @@ define('password', require('./generators/password'));
 define('phone', require('./generators/phone'));
 
 // Address
-
-define('country', require('./generators/country'));
-define('city', require('./generators/city'));
-define('zip', require('./generators/zip'));
-define('street', require('./generators/street'));
-define('address', require('./generators/address'));
-define('address1', require('./generators/address1'));
-define('address2', require('./generators/address2'));
-define('state', require('./generators/state'));
-define('latitude', require('./generators/latitude'));
-define('longitude', require('./generators/longitude'));
-define('lat', require('./generators/latitude'));
-define('lng', require('./generators/longitude'));
-define('long', require('./generators/longitude'));
+var address = require('./providers/address');
+define('country', address.country);
+define('city', address.city);
+define('zip', address.zip);
+define('street', address.street);
+define('address', address.address);
+define('address1', address.address1);
+define('address2', address.address2);
+define('state', address.state);
+define('latitude', address.latitude);
+define('longitude', address.longitude);
+define('lat', address.latitude);
+define('lng', address.longitude);
+define('long', address.longitude);
 
 // Stuff
 define('ip', require('./generators/ip'));
