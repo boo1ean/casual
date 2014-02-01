@@ -9,5 +9,6 @@ casual.register_provider(require('./providers/internet'));
 casual.register_provider(require('./providers/number'));
 casual.register_provider(require('./providers/date'));
 casual.register_provider(require('./providers/payment'));
+casual.register_provider(require('./providers/misc'));
 
 module.exports = casual;

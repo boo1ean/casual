@@ -101,6 +101,12 @@ describe('API', function() {
 			test('card_exp');
 			test('card_data');
 		});
+
+		describe('Misc provider', function() {
+			test('country_code');
+			test('language_code');
+			test('locale');
+		});
 	});
 
 	describe('Casual helpers', function() {
