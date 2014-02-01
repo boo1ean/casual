@@ -15,8 +15,7 @@ describe('API', function() {
 		});
 	};
 
-	describe('Common generators', function() {
-
+	describe('Embedded generators', function() {
 		describe('Address address provider', function() {
 			test('zip');
 			test('city');
@@ -58,7 +57,7 @@ describe('API', function() {
 			test('company_name');
 		});
 
-		it('Should work pretty well', function() {
+		describe('Number generator', function() {
 			test('integer');
 			test('double');
 		});

@@ -55,7 +55,8 @@ define('email', internet.email)
 define('url', internet.url)
 define('ip', internet.ip)
 
-define('integer', require('./generators/integer'));
-define('double', require('./generators/double'))
+var number = require('./providers/number');
+define('integer', number.integer);
+define('double', number.double);
 
 module.exports = casual;
