@@ -40,6 +40,7 @@ describe('API', function() {
 			test('lng');
 			test('long');
 			test('country');
+			test('building_number');
 		});
 
 		describe('Text provider', function() {
@@ -75,31 +76,58 @@ describe('API', function() {
 		});
 	});
 
-	describe('Defining new generator', function() {
-		it('Should create new casual property if getter doesn\'t have arguments', function() {
-			casual.define('wow', function() {
-				return 'wow wow';
+	describe('Casual helpers', function() {
+		describe('define', function() {
+			it('Should create new casual property if getter doesn\'t have arguments', function() {
+				casual.define('wow', function() {
+					return 'wow wow';
+				});
+
+				casual.wow.should.be.equal('wow wow');
 			});
 
-			casual.wow.should.be.equal('wow wow');
-		});
+			it('Should create new casual method if getter does have arguments', function() {
+				casual.define('x2', function(x) {
+					return x * 2;
+				});
 
-		it('Should create new casual method if getter does have arguments', function() {
-			casual.define('x2', function(x) {
-				return x * 2;
+				casual.x2(3).should.be.equal(6);
 			});
-
-			casual.x2(3).should.be.equal(6);
 		});
-	});
 
-	describe('random_element', function() {
-		it('Should pick random element from array', function() {
-			var array = [1,2,3,4,5,23,6,7,8,95,43];
-			var first = casual.random_element(array);
-			var second = casual.random_element(array);
+		describe('random_element', function() {
+			it('Should pick random element from array', function() {
+				var array = [1,2,3,4,5,23,6,7,8,95,43];
+				var first = casual.random_element(array);
+				var second = casual.random_element(array);
 
-			first.should.not.be.equal(second);
+				first.should.not.be.equal(second);
+			});
+		});
+
+		describe('extend', function() {
+			it('Should extend object', function() {
+				var result = casual.extend({}, {a: 42});
+				result.should.have.property('a', 42);
+			});
+		});
+
+		describe('numerify', function() {
+			it('Should replace every # in string with digit', function() {
+				var format = '####';
+				var numbers = casual.numerify(format);
+				parseInt(numbers).should.be.within(0, 9999);
+			});
+		});
+
+		describe('register_provider', function() {
+			it('Should define generators', function() {
+				casual.register_provider({
+					really_custom_generator: function() { return 'custom' }
+				});
+
+				casual.really_custom_generator.should.be.equal('custom');
+			})
 		});
 	});
 });

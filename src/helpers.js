@@ -1,7 +1,10 @@
-var random = require('./providers/number').integer;
+var number = require('./providers/number');
+
+var integer = number.integer,
+    digit = number.digit;
 
 var random_element = function(array) {
-	var index = random(0, array.length);
+	var index = integer(0, array.length);
 	return array[index];
 };
 
@@ -31,9 +34,14 @@ var define = function(name, generator) {
 	}
 };
 
+var numerify = function(format) {
+	return format.replace(/#/g, digit);
+};
+
 module.exports = {
 	random_element: random_element,
 	register_provider: register_provider,
 	extend: extend,
-	define: define
+	define: define,
+	numerify: numerify
 };
