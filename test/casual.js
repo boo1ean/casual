@@ -1,17 +1,26 @@
 var casual = require('../');
 
 describe('API', function() {
+	var max_times = 5;
 	var test = function(name) {
-		it('casual.' + name + ' should be ok', function() {
+		it('casual.' + name + ' should be ok', function(done) {
 			if (typeof casual[name] === 'function') {
-				var first = casual[name]();
-				var second = casual[name]();
+				var pivot = casual[name]();
 			} else {
-				var first = casual[name];
-				var second = casual[name];
+				var pivot = casual[name];
 			}
 
-			first.should.not.be.equal(second);
+			for (var i = 0; i < max_times; i++) {
+				if (typeof casual[name] === 'function') {
+					var result = casual[name]();
+				} else {
+					var result = casual[name];
+				}
+
+				if (result != pivot) {
+					return done();
+				}
+			}
 		});
 	};
 
