@@ -21,6 +21,8 @@ describe('API', function() {
 					return done();
 				}
 			}
+
+			done('Fail');
 		});
 	};
 
@@ -62,8 +64,9 @@ describe('API', function() {
 		describe('Person provider', function() {
 			test('name');
 			test('username');
-			test('firstname');
-			test('lastname');
+			test('first_name');
+			test('last_name');
+			test('full_name');
 			test('password');
 			test('name_prefix');
 			test('name_suffix');
@@ -91,6 +94,7 @@ describe('API', function() {
 			test('year');
 			test('timezone');
 		});
+
 	});
 
 	describe('Casual helpers', function() {
@@ -122,6 +126,28 @@ describe('API', function() {
 			});
 		});
 
+		describe('random_key', function() {
+			it('Should return random object key', function(done) {
+				var key = casual.random_key({ a: 1, b: 2});
+				if (key === 'a' || key === 'b') {
+					return done();
+				}
+
+				done('Fail');
+			});
+		});
+
+		describe('random_value', function() {
+			it('Should return random object value', function(done) {
+				var key = casual.random_value({ a: 1, b: 2});
+				if (key === 1 || key === 2) {
+					return done();
+				}
+
+				done('Fail');
+			});
+		});
+
 		describe('extend', function() {
 			it('Should extend object', function() {
 				var result = casual.extend({}, {a: 42});
@@ -144,7 +170,7 @@ describe('API', function() {
 				});
 
 				casual.really_custom_generator.should.be.equal('custom');
-			})
+			});
 		});
 	});
 });
