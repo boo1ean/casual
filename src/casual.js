@@ -10,5 +10,6 @@ casual.register_provider(require('./providers/number'));
 casual.register_provider(require('./providers/date'));
 casual.register_provider(require('./providers/payment'));
 casual.register_provider(require('./providers/misc'));
+casual.register_provider(require('./providers/color'));
 
 module.exports = casual;

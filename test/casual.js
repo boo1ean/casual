@@ -109,6 +109,13 @@ describe('API', function() {
 			test('mime_type');
 			test('file_extension');
 		});
+
+		describe('Color provider', function() {
+			test('color_name');
+			test('safe_color_name');
+			test('rgb_hex');
+			test('rgb_array');
+		});
 	});
 
 	describe('Casual helpers', function() {
