@@ -65,9 +65,10 @@ describe('API', function() {
 			test('firstname');
 			test('lastname');
 			test('password');
-			test('company_name');
 			test('name_prefix');
 			test('name_suffix');
+			test('company_name');
+			test('catch_phrase');
 		});
 
 		describe('Number generator', function() {
