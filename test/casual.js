@@ -49,12 +49,16 @@ describe('API', function() {
 			test('email');
 		});
 
-		it('Should work pretty well', function() {
+		describe('Person provider', function() {
 			test('name');
+			test('username');
 			test('firstname');
 			test('lastname');
 			test('password');
 			test('company_name');
+		});
+
+		it('Should work pretty well', function() {
 			test('integer');
 			test('double');
 		});

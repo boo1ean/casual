@@ -25,15 +25,15 @@ define('description', text.description);
 define('short_description', text.short_description);
 define('string', text.string);
 
-// User-related
+var person = require('./providers/person');
+define('name', person.name);
+define('username', person.username);
+define('firstname', person.firstname);
+define('lastname', person.lastname);
+define('password', person.password);
+define('phone', person.phone);
+define('company_name', person.company_name);
 
-define('name', require('./generators/name'));
-define('firstname', require('./generators/firstname'));
-define('lastname', require('./generators/lastname'));
-define('password', require('./generators/password'));
-define('phone', require('./generators/phone'));
-
-// Address
 var address = require('./providers/address');
 define('country', address.country);
 define('city', address.city);
@@ -49,14 +49,12 @@ define('lat', address.latitude);
 define('lng', address.longitude);
 define('long', address.longitude);
 
-// Internet
 var internet = require('./providers/internet');
 define('domain', internet.domain)
 define('email', internet.email)
 define('url', internet.url)
 define('ip', internet.ip)
 
-define('company_name', require('./generators/company_name'));
 define('integer', require('./generators/integer'));
 define('double', require('./generators/double'))
 
