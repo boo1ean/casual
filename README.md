@@ -1,4 +1,4 @@
-## Neat fake data generator [![Build Status](https://travis-ci.org/boo1ean/casual.png?branch=master)](https://travis-ci.org/boo1ean/casual)
+## Fake data generator [![Build Status](https://travis-ci.org/boo1ean/casual.png?branch=master)](https://travis-ci.org/boo1ean/casual)
 
 ## Installation
 
@@ -31,7 +31,7 @@ var point = casual.point;
 
 Casual uses javascript properties for common generators so you don't need to use function call operator
 
-## Available generators
+## Embedded generators
 
 ```javascript
 
@@ -135,7 +135,7 @@ casual.rgb_hex          // '#2e4e1f'
 casual.rgb_array        // [ 194, 193, 166 ]
 ```
 
-## Custom generators
+## Define custom generators
 
 ```javascript
 casual.define('user', function() {

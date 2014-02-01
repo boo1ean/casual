@@ -1,6 +1,6 @@
 {
   "name": "casual",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Neat fake data generator",
   "main": "src/casual.js",
   "scripts": {
