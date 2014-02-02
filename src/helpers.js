@@ -41,6 +41,8 @@ var define = function(name, generator) {
 	} else {
 		this.__defineGetter__(name, generator);
 	}
+
+	this['_' + name] = generator;
 };
 
 var numerify = function(format) {

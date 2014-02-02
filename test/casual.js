@@ -26,102 +26,150 @@ describe('API', function() {
 		});
 	};
 
+	var address = [
+		'zip',
+		'city',
+		'street',
+		'address',
+		'address1',
+		'address2',
+		'state',
+		'state_abbr',
+		'latitude',
+		'longitude',
+		'country',
+		'building_number'
+	];
+
+	var text = [
+		'sentence',
+		'sentences',
+		'title',
+		'text',
+		'description',
+		'short_description',
+		'string',
+		'word',
+		'words',
+		'array_of_words',
+		'letter'
+	];
+
+	var internet = [
+		'ip',
+		'domain',
+		'url',
+		'email'
+	];
+
+	var person = [
+		'name',
+		'username',
+		'first_name',
+		'last_name',
+		'full_name',
+		'password',
+		'name_prefix',
+		'name_suffix',
+		'company_name',
+		'catch_phrase',
+		'phone'
+	];
+
+	var number = [
+		'integer',
+		'double',
+		'digit',
+		'array_of_digits',
+		'array_of_integers',
+		'array_of_doubles'
+	];
+
+	var date = [
+		'unix_time',
+		'moment',
+		'date',
+		'time',
+		'century',
+		'am_pm',
+		'day_of_year',
+		'day_of_month',
+		'day_of_week',
+		'month_number',
+		'month_name',
+		'year',
+		'timezone'
+	];
+
+	var payment = [
+		'card_type',
+		'card_number',
+		'card_exp',
+		'card_data'
+	];
+
+	var misc = [
+		'country_code',
+		'language_code',
+		'locale',
+		'mime_type',
+		'file_extension'
+	];
+
+	var color = [
+		'color_name',
+		'safe_color_name',
+		'rgb_hex',
+		'rgb_array'
+	];
+
+	var providers = [
+		address,
+		text,
+		internet,
+		person,
+		number,
+		date,
+		payment,
+		misc,
+		color
+	];
+
 	describe('Embedded generators', function() {
 		describe('Address address provider', function() {
-			test('zip');
-			test('city');
-			test('street');
-			test('address');
-			test('address1');
-			test('address2');
-			test('state');
-			test('state_abbr');
-			test('latitude');
-			test('longitude');
-			test('country');
-			test('building_number');
+			address.forEach(test);
 		});
 
 		describe('Text provider', function() {
-			test('sentence');
-			test('sentences');
-			test('title');
-			test('text');
-			test('description');
-			test('short_description');
-			test('string');
-			test('word');
-			test('words');
-			test('array_of_words');
-			test('letter');
+			text.forEach(test);
 		});
 
 		describe('Internet provider', function() {
-			test('ip');
-			test('domain');
-			test('url');
-			test('email');
+			internet.forEach(test);
 		});
 
 		describe('Person provider', function() {
-			test('name');
-			test('username');
-			test('first_name');
-			test('last_name');
-			test('full_name');
-			test('password');
-			test('name_prefix');
-			test('name_suffix');
-			test('company_name');
-			test('catch_phrase');
-			test('phone');
+			person.forEach(test);
 		});
 
 		describe('Number generator', function() {
-			test('integer');
-			test('double');
-			test('digit');
-			test('array_of_digits');
-			test('array_of_integers');
-			test('array_of_doubles');
+			number.forEach(test);
 		});
 
 		describe('Date provider', function() {
-			test('unix_time');
-			test('moment');
-			test('date');
-			test('time');
-			test('century');
-			test('am_pm');
-			test('day_of_year');
-			test('day_of_month');
-			test('day_of_week');
-			test('month_number');
-			test('month_name');
-			test('year');
-			test('timezone');
+			date.forEach(test);
 		});
 
 		describe('Payment provider', function() {
-			test('card_type');
-			test('card_number');
-			test('card_exp');
-			test('card_data');
+			payment.forEach(test);
 		});
 
 		describe('Misc provider', function() {
-			test('country_code');
-			test('language_code');
-			test('locale');
-			test('mime_type');
-			test('file_extension');
+			misc.forEach(test);
 		});
 
 		describe('Color provider', function() {
-			test('color_name');
-			test('safe_color_name');
-			test('rgb_hex');
-			test('rgb_array');
+			color.forEach(test);
 		});
 	});
 
@@ -241,6 +289,31 @@ describe('API', function() {
 			for (var i in set1) {
 				set1[i].should.be.equal(set2[i]);
 			}
+		})
+	});
+
+	var verify_generator = function(generator) {
+		var function_name = '_' + generator;
+		casual[function_name].should.be.a.Function;
+
+		var seed = 123;
+
+		casual.seed(seed);
+		var val = casual[generator];
+		val = typeof val === 'function' ? val() : val;
+
+		casual.seed(seed);
+		var function_val = casual[function_name]();
+		val.should.be.eql(function_val);
+	};
+
+	var check_getters = function(generators) {
+		generators.forEach(verify_generator);
+	};
+
+	describe('Pure getters', function() {
+		it('Should have getter function at _{name}', function() {
+			providers.forEach(check_getters);
 		})
 	});
 });
