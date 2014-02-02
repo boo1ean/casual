@@ -207,7 +207,7 @@ describe('API', function() {
 		});
 
 		describe('join', function() {
-			it('Should join strings with space like a boss', function() {
+			it('Should join strings with spaces like a boss', function() {
 				casual.join('wow', 'such', 'sentence').should.be.equal('wow such sentence');
 			})
 		});
