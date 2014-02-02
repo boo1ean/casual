@@ -1,4 +1,4 @@
-## Fake data generator [![Build Status](https://travis-ci.org/boo1ean/casual.png?branch=master)](https://travis-ci.org/boo1ean/casual)
+## Fake data generator
 
 ## Installation
 
