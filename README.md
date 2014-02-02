@@ -209,7 +209,7 @@ casual.numerify(format); // '(10)-00-843-32'
 
 #### define
 
-See custom generators
+[Jump to custom generators](#define-custom-generators)
 
 #### register_provider
 
