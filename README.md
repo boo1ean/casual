@@ -243,6 +243,31 @@ casual.seed(123);
 
 It uses [Mersenne Twister](https://github.com/boo1ean/mersenne-twister) pseudorandom number generator in core.
 
+## Generators functions
+
+If you want to pass generator as a callback somewhere or just hate properties you always can access generator **function** at `casual._{generator}`
+
+```javascript
+// Generate value using function
+var title = casual._title();
+// Same as
+var title = casual.title;
+
+// Pass generator as callback
+var array_of = function(times, generator) {
+	var result = [];
+
+	for (var i = 0; i < times; ++i) {
+		result.push(generator());
+	}
+
+	return result;
+};
+
+// Will generate array of five random dates
+var array_of_dates = array_of(5, casual._date);
+```
+
 ## View providers output cli
 
 There is a simple cli util which could be used to view/debug providers output:
