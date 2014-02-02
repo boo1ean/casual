@@ -276,7 +276,7 @@ var casual = require('casual').functions();
 // Generate title
 casual.title();
 
-// Generate text
+// Generate timestamp
 casual.unix_time();
 ```
 
