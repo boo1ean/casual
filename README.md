@@ -101,7 +101,7 @@ casual.array_of_doubles(n = 7)           // [ -866.3755785673857, -166.621947195
 casual.unix_time                    // 659897901
 casual.moment                       // moment.js object see http://momentjs.com/docs/
 casual.date(format = 'YYYY-MM-DD')  // '2001-07-06' (see available formatters http://momentjs.com/docs/#/parsing/string-format/)
-casual.time()                       // '03:08:02' (see available formatters http://momentjs.com/docs/#/parsing/string-format/)
+casual.time(format = 'HH:mm:ss')    // '03:08:02' (see available formatters http://momentjs.com/docs/#/parsing/string-format/)
 casual.century                      // 'IV'
 casual.am_pm                        // 'am'
 casual.day_of_year                  // 323
