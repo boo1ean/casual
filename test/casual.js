@@ -185,6 +185,7 @@ describe('API', function() {
 
 			it('Should create new casual method if getter does have arguments', function() {
 				casual.define('x2', function(x) {
+					x = x || 2;
 					return x * 2;
 				});
 
@@ -314,6 +315,26 @@ describe('API', function() {
 	describe('Pure getters', function() {
 		it('Should have getter function at _{name}', function() {
 			providers.forEach(check_getters);
-		})
+		});
+
+		it('Should return only funtions interface', function() {
+			var functions = casual.functions();
+			for (var name in functions) {
+				if (name === 'seed') {
+					continue;
+				}
+
+				var generator = functions[name];
+				var seed = 546;
+
+				casual.seed(seed);
+				var first = casual['_' + name]();
+
+				casual.seed(seed);
+				var second = generator();
+
+				first.should.be.eql(second);
+			}
+		});
 	});
 });

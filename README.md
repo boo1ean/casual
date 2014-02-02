@@ -264,8 +264,20 @@ var array_of = function(times, generator) {
 	return result;
 };
 
-// Will generate array of five random dates
-var array_of_dates = array_of(5, casual._date);
+// Will generate array of five random timestamps
+var array_of_timestamps = array_of(5, casual._unix_time);
+```
+
+Or you can get functional version of casual generator:
+
+```javascript
+var casual = require('casual').functions();
+
+// Generate title
+casual.title();
+
+// Generate text
+casual.unix_time();
 ```
 
 ## View providers output cli
