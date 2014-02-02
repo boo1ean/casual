@@ -1,7 +1,7 @@
 var casual = require('../');
 
 describe('API', function() {
-	var max_times = 5;
+	var max_times = 10;
 	var test = function(name) {
 		it('casual.' + name + ' should be ok', function(done) {
 			if (typeof casual[name] === 'function') {
@@ -211,5 +211,36 @@ describe('API', function() {
 				casual.join('wow', 'such', 'sentence').should.be.equal('wow such sentence');
 			})
 		});
+	});
+
+	describe('Generator seeding', function() {
+		var create_data_set = function() {
+			return [
+				casual.description,
+				casual.text,
+				casual.random,
+				casual.integer,
+				casual.card_number,
+				casual.phone,
+				casual.unix_time,
+				casual.day_of_year,
+				casual.date,
+				casual.time
+			];
+		};
+
+		it('Should repeat random sequence on same seed', function() {
+			var seed = 123;
+
+			casual.seed(seed);
+			var set1 = create_data_set();
+
+			casual.seed(seed);
+			var set2 = create_data_set();
+
+			for (var i in set1) {
+				set1[i].should.be.equal(set2[i]);
+			}
+		})
 	});
 });

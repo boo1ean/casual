@@ -90,6 +90,7 @@ casual.phone           // '380 82 790 25 92'
 
 // Numbers
 
+casual.random                            // 0.7171590146608651 (core generator)
 casual.integer(from = -1000, to = 1000)  // 632
 casual.double(from = -1000, to = 1000)   // -234.12987444
 casual.array_of_digits(n = 7)            // [ 4, 8, 3, 1, 7, 6, 6 ]
@@ -231,6 +232,16 @@ casual.register_provider(doge_provider);
 casual.such;        // 'such good'
 casual.doge_phrase; // 'wow such flexible'
 ```
+
+## Seeding
+
+If you want to use a specific seed in order to get a repeatable random sequence:
+
+```javascript
+casual.seed(123);
+```
+
+It uses [Mersenne Twister](https://github.com/boo1ean/mersenne-twister) pseudorandom number generator in core.
 
 ## View providers output cli
 

@@ -17,6 +17,10 @@ var render_table = function(provider_name) {
 
 	var result = [];
 	for (var generator in provider) {
+		if (generator === 'seed') {
+			continue;
+		}
+
 		result.push([
 			generator,
 			typeof provider[generator] === 'function' ? provider[generator]() : provider.generator()
