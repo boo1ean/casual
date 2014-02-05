@@ -91,7 +91,7 @@ var provider = {
 	},
 
 	words: function(n) {
-		return provider.array_of_words().join(' ');
+		return provider.array_of_words(n).join(' ');
 	},
 
 	array_of_words: function(n) {
