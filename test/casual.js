@@ -36,7 +36,7 @@ describe('API', function() {
 		'state',
 		'state_abbr',
 		'province',
-		'province_abbr'
+		'province_abbr',
 		'latitude',
 		'longitude',
 		'country',
