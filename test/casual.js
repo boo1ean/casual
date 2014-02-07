@@ -35,6 +35,8 @@ describe('API', function() {
 		'address2',
 		'state',
 		'state_abbr',
+		'province',
+		'province_abbr',
 		'latitude',
 		'longitude',
 		'country',
@@ -338,3 +340,4 @@ describe('API', function() {
 		});
 	});
 });
+

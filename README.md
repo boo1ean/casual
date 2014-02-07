@@ -19,10 +19,10 @@ var city = casual.city;
 
 // Define custom generator
 casual.define('point', function() {
-	return {
-		x: Math.random(),
-		y: Math.random()
-	};
+    return {
+        x: Math.random(),
+        y: Math.random()
+    };
 });
 
 // Generate random point
@@ -48,6 +48,8 @@ casual.address1         // '8417 Veda Circles'
 casual.address2         // 'Suite 648'
 casual.state            // 'Michigan'
 casual.state_abbr       // 'CO'
+casual.province         // 'British Columbia'
+casual.province_abbr    // 'QC'
 casual.latitude         // 90.0610
 casual.longitude        // 180.0778
 casual.building_number  // 2413
@@ -140,12 +142,12 @@ casual.rgb_array        // [ 194, 193, 166 ]
 
 ```javascript
 casual.define('user', function() {
-	return {
-		email: casual.email,
-		firstname: casual.first_name,
-		lastname: casual.last_name,
-		password: casual.password
-	};
+    return {
+        email: casual.email,
+        firstname: casual.first_name,
+        lastname: casual.last_name,
+        password: casual.password
+    };
 });
 
 // Generate object with randomly generated fields
@@ -156,11 +158,11 @@ If you want to pass some params to your generator:
 
 ```javascript
 casual.define('profile', function(type) {
-	return {
-		title: casual.title,
-		description: casual.description,
-		type: type || 'private'
-	};
+    return {
+        title: casual.title,
+        description: casual.description,
+        type: type || 'private'
+    };
 });
 
 // Generate object with random data
@@ -218,13 +220,13 @@ Register generators provider
 ```javascript
 var words = ['flexible', 'great', 'ok', 'good'];
 var doge_provider = {
-	such: function() {
-		return 'such ' + casual.random_element(words);
-	},
+    such: function() {
+        return 'such ' + casual.random_element(words);
+    },
 
-	doge_phrase: function() {
-		return 'wow ' + provider.such();
-	}
+    doge_phrase: function() {
+        return 'wow ' + provider.such();
+    }
 };
 
 casual.register_provider(doge_provider);
@@ -255,13 +257,13 @@ var title = casual.title;
 
 // Pass generator as callback
 var array_of = function(times, generator) {
-	var result = [];
+    var result = [];
 
-	for (var i = 0; i < times; ++i) {
-		result.push(generator());
-	}
+    for (var i = 0; i < times; ++i) {
+        result.push(generator());
+    }
 
-	return result;
+    return result;
 };
 
 // Will generate array of five random timestamps
@@ -284,11 +286,11 @@ casual.unix_time();
 
 There is a simple cli util which could be used to view/debug providers output:
 
-	# Will render table with columns [generator_name, result] for all providers
-	node utils/show.js
+    # Will render table with columns [generator_name, result] for all providers
+    node utils/show.js
 
-	 # Will render table with columns [generator_name, result] only for person provider
-	node utils/show.js person
+     # Will render table with columns [generator_name, result] only for person provider
+    node utils/show.js person
 
 # License
 
