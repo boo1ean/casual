@@ -39,7 +39,7 @@ var define = function(name, generator) {
 	if (generator.length) {
 		this[name] = generator;
 	} else {
-		this.__defineGetter__(name, generator);
+		Object.defineProperty(this, name, { get: generator });
 	}
 
 	this['_' + name] = generator;
