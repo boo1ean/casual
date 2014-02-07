@@ -9,6 +9,10 @@ var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorad
 
 var state_abbrs = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY'];
 
+var provinces = ['Alberta','British Columbia','Manitoba','New Brunswick','Newfoundland','Northwest Territories','Nova Scotia','Nunavut','Ontario','Prince Edward Island','Quebec','Saskatchewan','Yukon'];
+
+var province_abbr = ['AB','BC','MB','NB','NL','NT','NS','NU','ON','PE','QC','SK','YT'];
+
 var city_prefixes = ['North', 'East', 'West', 'South', 'New', 'Lake', 'Port'];
 
 var city_suffixes = ['town', 'ton', 'land', 'ville', 'berg', 'burgh', 'borough', 'bury', 'view', 'port', 'mouth', 'stad', 'furt', 'chester', 'mouth', 'fort', 'haven', 'side', 'shire'];
@@ -61,6 +65,14 @@ var provider = {
 
 	state_abbr: function() {
 		return random_element(state_abbrs);
+	},
+
+	province: function() {
+		return random_element(provinces);
+	},
+
+	province_abbr: function() {
+		return random_element(province_abbr);
 	},
 
 	latitude: function () {
