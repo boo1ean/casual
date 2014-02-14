@@ -3,16 +3,9 @@ var provider = {
 
 	free_email_domains: ['gmail.com', 'yahoo.com', 'hotmail.com'],
 
-	user_name_formats: [
-		'{{last_name}}.{{first_name}}',
-		'{{first_name}}.{{last_name}}',
-		'{{first_name}}_{{last_name}}',
-		'{{last_name}}_{{first_name}}'
-	],
-
 	email_formats: [
-		'{{user_name}}@{{domain}}',
-		'{{user_name}}@{{free_email_domain}}'
+		'{{username}}@{{domain}}',
+		'{{username}}@{{free_email_domain}}'
 	],
 
 	url_formats: [
@@ -31,10 +24,6 @@ var provider = {
 
 	top_level_domain: function() {
 		return this.random_element(this.top_level_domains);
-	},
-
-	user_name: function() {
-		return this.populate_one_of(this.user_name_formats);
 	},
 
 	domain: function() {
