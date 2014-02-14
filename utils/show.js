@@ -1,5 +1,7 @@
 var table = require('text-table'),
-    casual = require('../');
+    realist = require('realist'),
+    casual = require('../'),
+    read = require('fs').readFileSync;
 
 var providers = [
 	'address',
@@ -12,6 +14,11 @@ var providers = [
 	'person',
 	'text'
 ];
+
+var usage = function(app) {
+	console.log(read(__dirname + '/usage.txt').toString());
+	app.stop();
+};
 
 var render_table = function(provider_name) {
 	provider = require('../src/providers/' + provider_name);
@@ -36,19 +43,25 @@ var render_table = function(provider_name) {
 	console.log(table(result));
 };
 
-var provider = process.argv.pop();
+var handler = function(opt, provider) {
+	casual = casual[opt.locale || 'en_US'];
 
-if (provider === __filename) {
+	if (!provider) {
+		providers.forEach(render_table);
+	} else if (providers.indexOf(provider) === -1) {
+		usage();
+		process.exit();
+	} else {
+		render_table(provider);
+	}
+};
 
-	providers.forEach(render_table);
+var options = {
+	locale: ['l', 'locale']
+};
 
-} else if (providers.indexOf(provider) === -1) {
+var events = {
+	'option help': usage
+};
 
-	console.log('Please use correct provider name:', providers.join(', '));
-	process.exit();
-
-} else {
-
-	render_table(provider);
-
-}
+realist(handler, options, events);

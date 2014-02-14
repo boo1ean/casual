@@ -29,6 +29,7 @@
   "devDependencies": {
     "should": "~3.1.2",
     "mocha": "~1.17.1",
-    "text-table": "~0.2.0"
+    "text-table": "~0.2.0",
+    "realist": "~0.2.5"
   }
 }
