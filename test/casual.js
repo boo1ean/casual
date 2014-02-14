@@ -320,7 +320,7 @@ describe('API', function() {
 		it('Should return only funtions interface', function() {
 			var functions = casual.functions();
 			for (var name in functions) {
-				if (name === 'seed') {
+				if (name === 'seed' || casual.locales.indexOf(name) !== -1) {
 					continue;
 				}
 
