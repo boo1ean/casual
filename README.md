@@ -198,6 +198,28 @@ var val = casual.random_key({ a: 1, b: 3, c: 42 });
 // val will be equal 'a' or 'b' or 'c'
 ```
 
+#### populate
+
+Replace placeholders with generators results
+
+```javascript
+casual.populate('{{email}} {{first_name}}');
+// 'Dallin.Konopelski@yahoo.com Lyla'
+```
+
+#### populate_one_of
+
+Pick random element from given array and populate it
+
+```javascript
+	var formats = ['{{first_name}}', '{{last_name}} {{city}}'];
+	casual.populate_one_of(formats);
+
+	// Same as
+
+	casual.populate(casual.random_element(formats));
+```
+
 #### numerify
 
 Replace all `#` in string with digits
