@@ -1,4 +1,5 @@
-var table = require('text-table');
+var table = require('text-table'),
+    casual = require('../');
 
 var providers = [
 	'address',
@@ -21,9 +22,13 @@ var render_table = function(provider_name) {
 			continue;
 		}
 
+		if (typeof provider[generator] !== 'function') {
+			continue;
+		}
+
 		result.push([
 			generator,
-			typeof provider[generator] === 'function' ? provider[generator]() : provider.generator()
+			casual['_' + generator]()
 		]);
 	};
 
