@@ -1,20 +1,6 @@
 var helpers = require('./helpers'),
     exists = require('fs').existsSync;
 
-var casual = helpers.extend({}, helpers);
-
-casual.functions = function() {
-	var adapter = {};
-
-	Object.keys(this).forEach(function(name) {
-		if (name[0] === '_') {
-			adapter[name.slice(1)] = casual[name];
-		}
-	});
-
-	return adapter;
-};
-
 var safe_require = function(filename) {
 	if (exists(filename + '.js')) {
 		return require(filename);
@@ -22,36 +8,57 @@ var safe_require = function(filename) {
 	return {};
 };
 
-var providers = [
-	'address',
-	'text',
-	'internet',
-	'person',
-	'number',
-	'date',
-	'payment',
-	'misc',
-	'color'
-];
+var build_casual = function() {
+	var casual = helpers.extend({}, helpers);
 
-casual.register_locale = function(locale) {
-	casual.define(locale, function() {
-		providers.forEach(function(provider) {
-			casual.register_provider(helpers.extend(
-				require('./providers/' + provider),
-				safe_require(__dirname + '/providers/' + locale + '/' + provider)
-			));
+	casual.functions = function() {
+		var adapter = {};
+
+		Object.keys(this).forEach(function(name) {
+			if (name[0] === '_') {
+				adapter[name.slice(1)] = casual[name];
+			}
 		});
 
-		return casual;
-	});
-}
+		return adapter;
+	};
 
-var locales = [
-	'en_US'
-];
+	var providers = [
+		'address',
+		'text',
+		'internet',
+		'person',
+		'number',
+		'date',
+		'payment',
+		'misc',
+		'color'
+	];
 
-locales.forEach(casual.register_locale);
+	casual.register_locale = function(locale) {
+		casual.define(locale, function() {
+			var casual = build_casual();
+
+			providers.forEach(function(provider) {
+				casual.register_provider(helpers.extend(
+					require('./providers/' + provider),
+					safe_require(__dirname + '/providers/' + locale + '/' + provider)
+				));
+			});
+
+			return casual;
+		});
+	}
+
+	var locales = [
+		'en_US',
+		'ru_RU'
+	];
+
+	locales.forEach(casual.register_locale);
+
+	return casual;
+};
 
 // Default locale is en_US
-module.exports = casual.en_US;
+module.exports = build_casual().en_US;
