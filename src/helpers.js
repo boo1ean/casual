@@ -52,6 +52,17 @@ var join = function() {
 	return tokens.filter(Boolean).join(' ');
 };
 
+var populate = function(format) {
+	var casual = this;
+	return format.replace(/\{\{(.+?)\}\}/g, function(match, generator) {
+		return casual['_' + generator]();
+	});
+};
+
+var populate_one_of = function(formats) {
+	return this.populate(this.random_element(formats));
+};
+
 module.exports = {
 	random_element: random_element,
 	random_value: random_value,
@@ -60,5 +71,7 @@ module.exports = {
 	extend: extend,
 	define: define,
 	numerify: numerify,
-	join: join
+	join: join,
+	populate: populate,
+	populate_one_of: populate_one_of
 };
