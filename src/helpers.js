@@ -33,16 +33,17 @@ var extend = function(a, b) {
 
 var define = function(name, generator) {
 	if (typeof generator != 'function') {
-		throw new Error('Casual generator must be defined by function');
+		this[name] = generator;
+		return;
 	}
 
 	if (generator.length) {
-		this[name] = generator;
+		this[name] = generator.bind(this);
 	} else {
 		Object.defineProperty(this, name, { get: generator });
 	}
 
-	this['_' + name] = generator;
+	this['_' + name] = generator.bind(this);
 };
 
 var numerify = function(format) {

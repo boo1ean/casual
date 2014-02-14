@@ -1,4 +1,5 @@
-var helpers = require('./helpers');
+var helpers = require('./helpers'),
+    exists = require('fs').existsSync;
 
 var casual = helpers.extend({}, helpers);
 
@@ -14,14 +15,43 @@ casual.functions = function() {
 	return adapter;
 };
 
-casual.register_provider(require('./providers/text'));
-casual.register_provider(require('./providers/person'));
-casual.register_provider(require('./providers/address'));
-casual.register_provider(require('./providers/internet'));
-casual.register_provider(require('./providers/number'));
-casual.register_provider(require('./providers/date'));
-casual.register_provider(require('./providers/payment'));
-casual.register_provider(require('./providers/misc'));
-casual.register_provider(require('./providers/color'));
+var safe_require = function(filename) {
+	if (exists(filename + '.js')) {
+		return require(filename);
+	}
+	return {};
+};
 
-module.exports = casual;
+var providers = [
+	'address',
+	'text',
+	'internet',
+	'person',
+	'number',
+	'date',
+	'payment',
+	'misc',
+	'color'
+];
+
+casual.register_locale = function(locale) {
+	casual.define(locale, function() {
+		providers.forEach(function(provider) {
+			casual.register_provider(helpers.extend(
+				require('./providers/' + provider),
+				safe_require(__dirname + '/providers/' + locale + '/' + provider)
+			));
+		});
+
+		return casual;
+	});
+}
+
+var locales = [
+	'en_US'
+];
+
+locales.forEach(casual.register_locale);
+
+// Default locale is en_US
+module.exports = casual.en_US;
