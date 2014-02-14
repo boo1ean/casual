@@ -17,11 +17,11 @@ var provider = {
 		from = typeof from === 'undefined' ? -1000 : from - 0;
 		to   = typeof to   === 'undefined' ? +1000 : to - 0;
 
-		return Math.floor(provider.random() * to + from);
+		return Math.floor(this.random * to + from);
 	},
 
 	digit: function() {
-		return Math.abs(provider.integer(0) % 10);
+		return Math.abs(this.integer(0) % 10);
 	},
 
 	random: function() {
@@ -32,22 +32,22 @@ var provider = {
 		from = typeof from === 'undefined' ? -1000 : from - 0;
 		to   = typeof to   === 'undefined' ? +1000 : to - 0;
 
-		return from + (to - from) * provider.random();
+		return from + (to - from) * this.random;
 	},
 
 	array_of_digits: function(n) {
 		n = n || 7;
-		return array_of(n, provider.digit);
+		return array_of(n, this._digit);
 	},
 
 	array_of_integers: function(n) {
 		n = n || 7;
-		return array_of(n, provider.integer);
+		return array_of(n, this._integer);
 	},
 
 	array_of_doubles: function(n) {
 		n = n || 7;
-		return array_of(n, provider.double);
+		return array_of(n, this._double);
 	},
 
 	seed: function(seed) {

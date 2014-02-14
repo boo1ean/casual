@@ -1,6 +1,3 @@
-var person = require('./person'),
-    integer = require('./number').integer;
-
 var provider = {
 	city_prefixes: ['North', 'East', 'West', 'South', 'New', 'Lake', 'Port'],
 
@@ -21,7 +18,7 @@ var provider = {
 	city: function() {
 		var prefix = this.random_element(this.city_prefixes);
 		var suffix = this.random_element(this.city_suffixes);
-		var middle = this.random_element([person.first_name(), person.last_name()], null);
+		var middle = this.random_element([this.first_name, this.last_name], null);
 		return this.join(prefix, middle, suffix);
 	},
 
@@ -30,7 +27,7 @@ var provider = {
 	},
 
 	street: function() {
-		var prefix = this.random_element([person.first_name(), person.last_name()]);
+		var prefix = this.random_element([this.first_name, this.last_name]);
 		var suffix = this.random_element(this.street_suffixes);
 		return this.join(prefix, suffix);
 	},
@@ -48,15 +45,15 @@ var provider = {
 	},
 
 	latitude: function () {
-		return (integer(180 * 10000) / 10000.0 - 90.0).toFixed(4);
+		return (this.integer(180 * 10000) / 10000.0 - 90.0).toFixed(4);
 	},
 
 	longitude: function () {
-		return (integer(360 * 10000) / 10000.0 - 180.0).toFixed(4);
+		return (this.integer(360 * 10000) / 10000.0 - 180.0).toFixed(4);
 	},
 
 	building_number: function() {
-		return integer(1, 9999);
+		return this.integer(1, 9999);
 	}
 };
 

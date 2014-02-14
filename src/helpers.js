@@ -1,20 +1,17 @@
 var number = require('./providers/number');
 
-var integer = number.integer,
-    digit = number.digit;
-
 var random_element = function(array) {
-	var index = integer(0, array.length);
+	var index = this.integer(0, array.length);
 	return array[index];
 };
 
 var random_key = function(object) {
 	var keys = Object.keys(object);
-	return random_element(keys);
+	return this.random_element(keys);
 };
 
 var random_value = function(object) {
-	return object[random_key(object)];
+	return object[this.random_key(object)];
 };
 
 var register_provider = function(provider) {
@@ -47,7 +44,7 @@ var define = function(name, generator) {
 };
 
 var numerify = function(format) {
-	return format.replace(/#/g, digit);
+	return format.replace(/#/g, this._digit);
 };
 
 var join = function() {
