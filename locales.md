@@ -2,6 +2,8 @@
 
 Create locale folder in `src/providers`.
 
+Add locale to locales list [src/casual.js](https://github.com/boo1ean/casual/blob/master/src/casual.js#L53-L56)
+
 Create specific providers inside of locale folder, it should have same name as base provider.
 
 Locale-specific provider will be extended from base provider and will have all its properties.
