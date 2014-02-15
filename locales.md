@@ -6,7 +6,7 @@ Create specific providers inside of locale folder, it should have same name as b
 
 Locale-specific provider will be extended from base provider and will have all its properties.
 
-Three is three things you can override or add:
+Three is three things you can override/add:
 
 - dictionaries (leave formats and algorithms, just change dictionaries)
 - formats (leave dictionaries and algorithms, just change formats)
@@ -20,8 +20,6 @@ It should be pretty straightforward after looking at examples:
 
 To view generator results you can use help util:
 
-```
-	node utils/show.js internet -l ru_RU
-```
+> node utils/show.js internet -l ru_RU
 
 For details see [usage](https://github.com/boo1ean/casual/blob/master/utils/usage.txt)

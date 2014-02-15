@@ -2,7 +2,7 @@
 
 ## Installation
 
-    $ npm install casual
+> npm install casual
 
 ## Usage
 
@@ -136,19 +136,6 @@ casual.rgb_hex          // '#2e4e1f'
 casual.rgb_array        // [ 194, 193, 166 ]
 ```
 
-## Localization
-
-You can get localized version of casual generator:
-
-```javascript
-var casual = require('casual').ru_RU;
-casual.street; // 'Бухарестская'
-```
-
-See [src/providers/<locale>](https://github.com/boo1ean/casual/blob/master/locales.md) for more details about available locales and locale specific generators.
-
-If you don't find necessary locale, please create an issue or just [add it](#contributing) :)
-
 ## Define custom generators
 
 ```javascript
@@ -182,6 +169,21 @@ var profile = casual.profile('public');
 
 NOTE: if getter function has non-empty arguments list then generator should be called as function `casual.profile('public')`,
 otherwise it should be accessed as property `casual.profile`.
+
+## Localization
+
+You can get localized version of casual generator:
+
+```javascript
+var casual = require('casual').ru_RU;
+casual.street; // 'Бухарестская'
+```
+
+Default locale is `en_US`.
+
+See [src/providers/{{locale}}](https://github.com/boo1ean/casual/blob/master/locales.md) for more details about available locales and locale specific generators.
+
+If you don't find necessary locale, please create an issue or just [add it](#contributing) :)
 
 ## Helpers
 
