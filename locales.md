@@ -8,6 +8,18 @@ Create specific providers inside of locale folder, it should have same name as b
 
 Locale-specific provider will be extended from base provider and will have all its properties.
 
+Keep in mind that all provider methods will be bound to the casual object, so you can use other generators for your generator:
+
+```javascript
+provider = {
+	whoop_name: function() {
+		return this.name + '!';
+	}
+}
+
+module.exports = provider;
+```
+
 Three is three things you can override/add:
 
 - dictionaries (leave formats and algorithms, just change dictionaries)

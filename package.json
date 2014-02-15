@@ -1,7 +1,7 @@
 {
   "name": "casual",
-  "version": "1.3.3",
-  "description": "Neat fake data generator",
+  "version": "1.4.3",
+  "description": "Fake data generator",
   "main": "src/casual.js",
   "scripts": {
     "test": "make test"
