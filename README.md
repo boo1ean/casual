@@ -227,12 +227,12 @@ casual.populate('{{email}} {{first_name}}');
 Pick random element from given array and populate it
 
 ```javascript
-	var formats = ['{{first_name}}', '{{last_name}} {{city}}'];
-	casual.populate_one_of(formats);
+var formats = ['{{first_name}}', '{{last_name}} {{city}}'];
+casual.populate_one_of(formats);
 
-	// Same as
+// Same as
 
-	casual.populate(casual.random_element(formats));
+casual.populate(casual.random_element(formats));
 ```
 
 #### numerify
