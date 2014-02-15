@@ -136,6 +136,19 @@ casual.rgb_hex          // '#2e4e1f'
 casual.rgb_array        // [ 194, 193, 166 ]
 ```
 
+## Localization
+
+You can get localized version of casual generator:
+
+```javascript
+var casual = require('casual').ru_RU;
+casual.street; // 'Бухарестская'
+```
+
+See [src/providers/<locale>](https://github.com/boo1ean/casual/blob/master/locales.md) for more details about available locales and locale specific generators.
+
+If you don't find necessary locale, please create an issue or just [add it](#contributing) :)
+
 ## Define custom generators
 
 ```javascript
@@ -231,7 +244,7 @@ casual.numerify(format); // '(10)-00-843-32'
 
 #### define
 
-[Jump to custom generators](#define-custom-generators)
+[See custom generators](#define-custom-generators)
 
 #### register_provider
 
@@ -311,6 +324,10 @@ There is a simple cli util which could be used to view/debug providers output:
 
 	 # Will render table with columns [generator_name, result] only for person provider
 	node utils/show.js person
+
+## Contributing
+
+- [Adding new locale](https://github.com/boo1ean/casual/blob/master/locales.md)
 
 # License
 
