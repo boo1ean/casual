@@ -1,6 +1,6 @@
 ## Adding locale
 
-Create locale folder in `src/providers`.
+Create locale folder in [src/providers](https://github.com/boo1ean/casual/blob/master/src/providers)
 
 Add locale to locales list [src/casual.js](https://github.com/boo1ean/casual/blob/master/src/casual.js#L53-L56)
 
