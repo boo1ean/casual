@@ -1,7 +1,7 @@
 var number = require('./providers/number');
 
 var random_element = function(array) {
-	var index = this.integer(0, array.length);
+	var index = this.integer(0, array.length - 1);
 	return array[index];
 };
 

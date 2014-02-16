@@ -17,7 +17,7 @@ var provider = {
 		from = typeof from === 'undefined' ? -1000 : from - 0;
 		to   = typeof to   === 'undefined' ? +1000 : to - 0;
 
-		return Math.floor(this.random * to + from);
+		return Math.round(from + (to - from) * this.random);
 	},
 
 	digit: function() {
