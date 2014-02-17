@@ -20,7 +20,7 @@ provider = {
 module.exports = provider;
 ```
 
-Three is three things you can override/add:
+There are three things you can override/add:
 
 - dictionaries (leave formats and algorithms, just change dictionaries)
 - formats (leave dictionaries and algorithms, just change formats)
