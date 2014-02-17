@@ -1,4 +1,5 @@
 var provider = {
+	
 	safe_color_names: [
 		'black', 'maroon', 'green', 'navy', 'olive',
 		'purple', 'teal', 'lime', 'blue', 'silver',
