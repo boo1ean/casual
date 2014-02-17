@@ -245,6 +245,14 @@ describe('API', function() {
 			});
 		});
 
+		describe('letterify',function(){
+			it('should replace every X in a string with a letter',function() {
+				var format = 'XXXX';
+				var result = casual.letterify(format);
+				/^[a-zA-Z+$]/.test(result).should.be.true;
+			});
+		})
+
 		describe('register_provider', function() {
 			it('Should define generators', function() {
 				casual.register_provider({
