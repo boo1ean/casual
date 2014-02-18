@@ -28,6 +28,4 @@ var provider = {
 
 };
 
-
-
 module.exports = provider;
