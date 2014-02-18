@@ -47,6 +47,10 @@ var numerify = function(format) {
 	return format.replace(/#/g, this._digit);
 };
 
+var letterify = function(format) {
+	return format.replace(/X/g,this._letter);
+}
+
 var join = function() {
 	var tokens = Array.prototype.slice.apply(arguments);
 	return tokens.filter(Boolean).join(' ');
@@ -71,6 +75,7 @@ module.exports = {
 	extend: extend,
 	define: define,
 	numerify: numerify,
+	letterify:letterify,
 	join: join,
 	populate: populate,
 	populate_one_of: populate_one_of

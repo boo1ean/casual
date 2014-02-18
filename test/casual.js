@@ -245,6 +245,21 @@ describe('API', function() {
 			});
 		});
 
+		describe('letterify',function(){
+			it('should replace every X in a string with a letter',function() {
+				var re = /^[a-zA-Z]+$/;
+
+				var result = casual.letterify('XXXX');
+				re.test(result).should.be.true;
+
+				result = casual.letterify('1234');
+				re.test(result).should.be.false;
+				
+				result = casual.letterify('X123X');
+				re.test(result).should.be.false;
+			});
+		})
+
 		describe('register_provider', function() {
 			it('Should define generators', function() {
 				casual.register_provider({
