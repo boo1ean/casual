@@ -260,7 +260,7 @@ var doge_provider = {
 	},
 
 	doge_phrase: function() {
-		return 'wow ' + provider.such();
+		return 'wow ' + casual.such();
 	}
 };
 
