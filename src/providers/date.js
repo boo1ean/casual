@@ -15,7 +15,7 @@ var provider = {
 
 	date: function(format) {
 		format = format || 'YYYY-MM-DD';
-		return this.moment.format(this.format);
+		return this.moment.format(format);
 	},
 
 	time: function(format) {
