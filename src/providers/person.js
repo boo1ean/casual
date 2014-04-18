@@ -1,7 +1,7 @@
 var glues = ['.', '-', '_', null];
 
 var provider = {
-	phone_format: '380 ## ### ## ##',
+	phone_formats: ['380 ## ### ## ##'],
 
 	prefix: ['Mr.', 'Mrs.', 'Ms.', 'Miss', 'Dr.'],
 
@@ -63,7 +63,7 @@ var provider = {
 	},
 
 	phone: function() {
-		return this.numerify(this.phone_format);
+		return this.numerify(this.random_element(this.phone_formats));
 	},
 
 	name_prefix: function() {
