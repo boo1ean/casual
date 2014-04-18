@@ -37,18 +37,33 @@ var en_to_ru = {
 	'ї': 'i',   'Ї': 'I'
 };
 
+var asciify = function(str) {
+	console.log('qwe');
+	return str.split('').map(function(c) {
+		if (en_to_ru[c]) {
+			return en_to_ru[c];
+		}
+
+		return c;
+	}).join('');
+};
+
 var provider = {
 	free_email_domains: ['yandex.ru', 'ya.ru', 'narod.ru', 'gmail.com', 'mail.ru', 'list.ru', 'bk.ru', 'inbox.ru', 'rambler.ru', 'hotmail.com'],
 
 	top_level_domains: ['com', 'com', 'net', 'org', 'ru', 'ru', 'ru', 'ru'],
 
-	to_ascii: function(str) {
-		return str.split('').map(function(c) {
-			if (en_to_ru[c]) {
-				return en_to_ru[c];
-			}
+	domain: function() {
+		return asciify(this.populate_one_of(this.domain_formats));
+	},
 
-			return c;
-		}).join('');
+	email: function() {
+		return asciify(this.populate_one_of(this.email_formats));
+	},
+
+	url: function() {
+		return asciify(this.populate_one_of(this.url_formats));
 	}
-}
+};
+
+module.exports = provider;
