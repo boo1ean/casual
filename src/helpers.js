@@ -48,8 +48,8 @@ var numerify = function(format) {
 };
 
 var letterify = function(format) {
-	return format.replace(/X/g,this._letter);
-}
+	return format.replace(/X/g, this._letter);
+};
 
 var join = function() {
 	var tokens = Array.prototype.slice.apply(arguments);
