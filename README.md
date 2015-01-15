@@ -68,10 +68,11 @@ casual.letter                 // 'k'
 
 // Internet
 
-casual.ip      // '21.44.122.149'
-casual.domain  // 'darrion.us'
-casual.url     // 'germaine.net'
-casual.email   // 'Josue.Hessel@claire.us'
+casual.ip           // '21.44.122.149'
+casual.domain       // 'darrion.us'
+casual.url          // 'germaine.net'
+casual.email        // 'Josue.Hessel@claire.us'
+casual.user_agent   // 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
 
 // Person
 
