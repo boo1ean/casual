@@ -27,7 +27,7 @@
     "mersenne-twister": "~1.0.1"
   },
   "devDependencies": {
-    "chai": "^2.1.2",
+    "chai": "2.1.2",
     "mocha": "~1.17.1",
     "realist": "~0.2.5",
     "should": "~3.1.2",
