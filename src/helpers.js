@@ -37,10 +37,21 @@ var define = function(name, generator) {
 	if (generator.length) {
 		this[name] = generator.bind(this);
 	} else {
-		Object.defineProperty(this, name, { get: generator });
+		Object.defineProperty(this, name, {
+      configurable: true,
+      get: generator
+    });
 	}
 
 	this['_' + name] = generator.bind(this);
+};
+
+var undefine = function(name) {
+  delete( this[name] );
+  delete this['_' + name];
+  Object.defineProperty(this, name, {
+    value: undefined
+  });
 };
 
 var numerify = function(format) {
@@ -74,6 +85,7 @@ module.exports = {
 	register_provider: register_provider,
 	extend: extend,
 	define: define,
+  undefine: undefine,
 	numerify: numerify,
 	letterify:letterify,
 	join: join,
