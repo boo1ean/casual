@@ -51,7 +51,7 @@ var provider = {
 	},
 
 	coin_flip: function() {
-		return generator() < 0.5;
+		return generator.random() < 0.5;
 	},
 
 	seed: function(seed) {
