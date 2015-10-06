@@ -39,18 +39,18 @@ Casual uses javascript properties for common generators so you don't need to use
 
 // Address
 
-casual.country             // 'United Kingdom'
-casual.city                // 'New Ortiz chester'
-casual.zip(digits = [5,9]) // '26995-7979' (if no digits specified then random selection between ZIP and ZIP+4)
-casual.street              // 'Jadyn Islands'
-casual.address             // '6390 Tremblay Pines Suite 784'
-casual.address1            // '8417 Veda Circles'
-casual.address2            // 'Suite 648'
-casual.state               // 'Michigan'
-casual.state_abbr          // 'CO'
-casual.latitude            // 90.0610
-casual.longitude           // 180.0778
-casual.building_number     // 2413
+casual.country              // 'United Kingdom'
+casual.city                 // 'New Ortiz chester'
+casual.zip(digits = {5, 9}) // '26995-7979' (if no digits specified then random selection between ZIP and ZIP+4)
+casual.street               // 'Jadyn Islands'
+casual.address              // '6390 Tremblay Pines Suite 784'
+casual.address1             // '8417 Veda Circles'
+casual.address2             // 'Suite 648'
+casual.state                // 'Michigan'
+casual.state_abbr           // 'CO'
+casual.latitude             // 90.0610
+casual.longitude            // 180.0778
+casual.building_number      // 2413
 
 // Text
 
