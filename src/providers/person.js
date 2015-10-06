@@ -39,7 +39,7 @@ var provider = {
 	],
 
 	name: function() {
-		return this.populate_one_of(this.name_formats)
+		return this.populate_one_of(this.name_formats);
 	},
 
 	username: function() {
@@ -87,7 +87,7 @@ var provider = {
 
 		for (var i in this.catch_phrase_words) {
 			result.push(this.random_element(this.catch_phrase_words[i]));
-		};
+		}
 
         return result.join(' ');
 	}
