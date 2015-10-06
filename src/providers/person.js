@@ -1,7 +1,7 @@
 var glues = ['.', '-', '_', null];
 
 var provider = {
-	phone_formats: ['380 ## ### ## ##'],
+	phone_formats: ['###-###-####'],
 
 	prefix: ['Mr.', 'Mrs.', 'Ms.', 'Miss', 'Dr.'],
 
