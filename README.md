@@ -97,6 +97,7 @@ casual.double(from = -1000, to = 1000)   // -234.12987444
 casual.array_of_digits(n = 7)            // [ 4, 8, 3, 1, 7, 6, 6 ]
 casual.array_of_integers(n = 7)          // [ -105, -7, -532, -596, -430, -957, -234 ]
 casual.array_of_doubles(n = 7)           // [ -866.3755785673857, -166.62194719538093, ...]
+casual.coin_flip                         // true
 
 // Date
 

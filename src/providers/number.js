@@ -50,6 +50,10 @@ var provider = {
 		return array_of(n, this._double);
 	},
 
+	coin_flip: function() {
+		return generator.random() < 0.5;
+	},
+
 	seed: function(seed) {
 		generator.init_seed(seed);
 	}
