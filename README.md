@@ -328,6 +328,10 @@ There is a simple cli util which could be used to view/debug providers output:
 
 	 # Will render table with columns [generator_name, result] only for person provider
 	node utils/show.js person
+	
+## Browserify support
+
+Currently you can't use casual with browserify. Please check out this browserify-friendly fork [Klowner/casual-browserify](https://github.com/Klowner/casual-browserify)
 
 ## Contributing
 
