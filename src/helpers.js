@@ -37,10 +37,8 @@ var define = function(name, generator) {
 	if (generator.length) {
 		this[name] = generator.bind(this);
 	} else {
-		Object.defineProperty(this, name, {
-      configurable: true,
-      get: generator
-    });
+    var config = {configurable: true, get: generator};
+		Object.defineProperty(this, name, config);
 	}
 
 	this['_' + name] = generator.bind(this);
