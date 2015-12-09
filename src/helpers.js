@@ -29,19 +29,19 @@ var extend = function(a, b) {
 };
 
 var define = function(name, generator) {
-	if (typeof generator != 'function') {
-		this[name] = generator;
-		return;
-	}
+  if (typeof generator != 'function') {
+    this[name] = generator;
+    return;
+  }
 
-	if (generator.length) {
-		this[name] = generator.bind(this);
-	} else {
+  if (generator.length) {
+    this[name] = generator.bind(this);
+  } else {
     var config = {configurable: true, get: generator};
-		Object.defineProperty(this, name, config);
-	}
+    Object.defineProperty(this, name, config);
+  }
 
-	this['_' + name] = generator.bind(this);
+  this['_' + name] = generator.bind(this);
 };
 
 var undefine = function(name) {
