@@ -1,7 +1,3 @@
-var first_letter_up = function(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-};
-
 var provider = {
 	words_list: [
     "هذا",
@@ -14,7 +10,7 @@ var provider = {
     "يستبدل",
     "في",
     "نفس",
-    "المساحة،",
+    "المساحة",
     "لقد",
     "تم",
     "توليد",
@@ -107,7 +103,8 @@ var provider = {
     "ليظهر",
     "للعميل",
     "الشكل",
-    "كاملاً،دور",
+    "كاملاً",
+    "دور",
     "مولد",
     "النص",
     "العربى",
@@ -147,30 +144,30 @@ var provider = {
     "يبدو",
     "وكأنه",
     "نص",
-    "منسوخ،",
+    "منسوخ",
     "غير",
-    "منظم،",
+    "منظم",
     "غير",
-    "منسق،",
+    "منسق",
     "أو",
     "حتى",
     "غير",
-    "مفهوم.",
+    "مفهوم",
     "لأنه",
     "مازال",
     "نصاً",
     "بديلاً",
-    "ومؤقتاً."
+    "ومؤقتاً"
   ],
 
 	letters: 'ابتثجحخدذرزسشصضطظعغفقكلمنهويأءئؤ',
 
 	title: function() {
-		return first_letter_up(this.words(this.integer(2, 3)));
+		return this.words(this.integer(2, 3));
 	},
 
 	sentence: function() {
-		return first_letter_up(this.words(this.integer(3, 10))) + '.';
+		return this.words(this.integer(3, 10)) + '.';
 	},
 
 	text: function() {

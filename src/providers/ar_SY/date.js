@@ -1,5 +1,5 @@
 var moment = require('moment');
-moment.lang('ar');
+moment.locale('ar');
 
 var provider = {
 	centuries: ['الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع','الثامن','التاسع','العاشر','الحادي عشر','الثاني عشر','الثالث عشر','الرابع عشر','الخامس عشر','السادس عشر','السابع عشر','الثامن عشر','التاسع عشر','العشرون','الواحد والعشرون'],
@@ -15,12 +15,12 @@ var provider = {
 	},
 
 	date: function(format) {
-		format = format || 'YYYY-MM-DD';
+		format = format || 'L';
 		return this.moment.format(format);
 	},
 
 	time: function(format) {
-		format = format || 'HH:mm:ss';
+		format = format;
 		return this.moment.format(format);
 	},
 
