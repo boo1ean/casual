@@ -1,2 +1,2 @@
 var moment = require('moment');
-moment.lang('locale');
+moment.locale('it');
