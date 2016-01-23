@@ -58,7 +58,7 @@ var build_casual = function() {
 		'en_CA',
 		'it_CH',
 		'de_DE',
-    'ar_SY'
+		'ar_SY'
 	];
 
 	locales.forEach(casual.register_locale);
