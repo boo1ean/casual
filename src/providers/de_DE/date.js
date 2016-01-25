@@ -1,5 +1,5 @@
 var moment = require('moment');
-moment.lang('de');
+moment.locale('de');
 
 var provider = {
 
