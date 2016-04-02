@@ -1,5 +1,5 @@
 var provider = {
-	
+
 	safe_color_names: [
 		'black', 'maroon', 'green', 'navy', 'olive',
 		'purple', 'teal', 'lime', 'blue', 'silver',
@@ -44,7 +44,7 @@ var provider = {
 	},
 
 	rgb_hex: function() {
-		return '#' + this.integer(0, 16777216).toString(16);
+		return '#' + ('000000' + this.integer(0, 16777216).toString(16)).slice(-6);
 	},
 
 	rgb_array: function() {
