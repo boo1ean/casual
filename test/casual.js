@@ -1,4 +1,5 @@
 var casual = require('../');
+var chai   = require('chai');
 
 describe('API', function() {
 	var max_times = 10;
@@ -191,6 +192,16 @@ describe('API', function() {
 
 				casual.x2(3).should.be.equal(6);
 			});
+
+      it('Should undefine a casual method', function(){
+        casual.define('aThing', function(){
+          return 'thinggg';
+        });
+
+        casual.aThing.should.be.equal('thinggg');
+        casual.undefine('aThing');
+        chai.expect( casual.aThing ).to.be.undefined;
+      });
 		});
 
 		describe('random_element', function() {
@@ -254,7 +265,7 @@ describe('API', function() {
 
 				result = casual.letterify('1234');
 				re.test(result).should.be.false;
-				
+
 				result = casual.letterify('X123X');
 				re.test(result).should.be.false;
 			});
