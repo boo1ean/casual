@@ -279,32 +279,39 @@ describe('API', function() {
 
 	describe('Generator seeding', function() {
 		var create_data_set = function() {
-			return [
-				casual.description,
-				casual.text,
-				casual.random,
-				casual.integer,
-				casual.card_number,
-				casual.phone,
-				casual.unix_time,
-				casual.day_of_year,
-				casual.date,
-				casual.time
-			];
+			return {
+				description: casual.description,
+				text: casual.text,
+				random: casual.random,
+				integer: casual.integer,
+				card_number: casual.card_number,
+				phone: casual.phone,
+				unix_time: casual.unix_time,
+				day_of_year: casual.day_of_year,
+				date: casual.date,
+				time: casual.time,
+				moment_string: casual.moment.toISOString(),
+			};
 		};
 
-		it('Should repeat random sequence on same seed', function() {
+		it('Should repeat random sequence on same seed', function(done) {
+			this.timeout(3000);
+
 			var seed = 123;
 
 			casual.seed(seed);
 			var set1 = create_data_set();
 
-			casual.seed(seed);
-			var set2 = create_data_set();
+			setTimeout(function () {
+				casual.seed(seed);
+				var set2 = create_data_set();
 
-			for (var i in set1) {
-				set1[i].should.be.equal(set2[i]);
-			}
+				for (var i in set1) {
+					set1[i].should.be.equal(set2[i], i);
+				}
+
+				done();
+			}, 2001); // Check for date/time perturbation
 		})
 	});
 
