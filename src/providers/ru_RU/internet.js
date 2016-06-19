@@ -38,7 +38,6 @@ var en_to_ru = {
 };
 
 var asciify = function(str) {
-	console.log('qwe');
 	return str.split('').map(function(c) {
 		if (en_to_ru[c]) {
 			return en_to_ru[c];
