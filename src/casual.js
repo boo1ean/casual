@@ -1,4 +1,5 @@
 var helpers = require('./helpers'),
+	build = require('./build'),
     exists = require('fs').existsSync;
 
 var safe_require = function(filename) {
@@ -8,63 +9,47 @@ var safe_require = function(filename) {
 	return {};
 };
 
-var build_casual = function() {
-	var casual = helpers.extend({}, helpers);
+var providers = [
+	'address',
+	'text',
+	'internet',
+	'person',
+	'number',
+	'date',
+	'payment',
+	'misc',
+	'color'
+];
 
-	casual.functions = function() {
-		var adapter = {};
+var casual = build([]);
 
-		Object.keys(this).forEach(function(name) {
-			if (name[0] === '_') {
-				adapter[name.slice(1)] = casual[name];
-			}
+casual.register_locale = function(locale) {
+	casual.define(locale, function() {
+		var casual = build([]);
+
+		providers.forEach(function(provider) {
+			casual.register_provider(helpers.extend(
+				require('./providers/' + provider),
+				safe_require(__dirname + '/providers/' + locale + '/' + provider)
+			));
 		});
 
-		return adapter;
-	};
-
-	var providers = [
-		'address',
-		'text',
-		'internet',
-		'person',
-		'number',
-		'date',
-		'payment',
-		'misc',
-		'color'
-	];
-
-	casual.register_locale = function(locale) {
-		casual.define(locale, function() {
-			var casual = build_casual();
-
-			providers.forEach(function(provider) {
-				casual.register_provider(helpers.extend(
-					require('./providers/' + provider),
-					safe_require(__dirname + '/providers/' + locale + '/' + provider)
-				));
-			});
-
-			return casual;
-		});
-	}
-
-	var locales = [
-		'en_US',
-		'ru_RU',
-		'uk_UA',
-		'nl_NL',
-		'en_CA',
-		'it_CH',
-		'de_DE',
-		'ar_SY'
-	];
-
-	locales.forEach(casual.register_locale);
-
-	return casual;
+		return casual;
+	});
 };
 
+var locales = [
+	'en_US',
+	'ru_RU',
+	'uk_UA',
+	'nl_NL',
+	'en_CA',
+	'it_CH',
+	'de_DE',
+	'ar_SY'
+];
+
+locales.forEach(casual.register_locale);
+
 // Default locale is en_US
-module.exports = build_casual().en_US;
+module.exports = casual.en_US;
