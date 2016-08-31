@@ -556,6 +556,11 @@ var provider = {
 	file_extension: function() {
 		var ext = this.random_value(this.mime_types);
 		return typeof ext === 'string' ? ext : this.random_element(ext);
+	},
+
+	boolean: function() {
+		// Returns a random number between 0 (inclusive) and 1 (exclusive)
+		return Math.random() < 0.5;
 	}
 };
 
