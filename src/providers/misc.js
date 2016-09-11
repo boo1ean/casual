@@ -559,8 +559,7 @@ var provider = {
 	},
 
 	boolean: function() {
-		// Returns a random number between 0 (inclusive) and 1 (exclusive)
-		return Math.random() < 0.5;
+		return this.coin_flip;
 	}
 };
 
