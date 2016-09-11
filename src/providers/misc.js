@@ -556,6 +556,10 @@ var provider = {
 	file_extension: function() {
 		var ext = this.random_value(this.mime_types);
 		return typeof ext === 'string' ? ext : this.random_element(ext);
+	},
+
+	boolean: function() {
+		return this.coin_flip;
 	}
 };
 
