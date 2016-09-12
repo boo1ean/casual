@@ -113,7 +113,8 @@ describe('API', function() {
 		'language_code',
 		'locale',
 		'mime_type',
-		'file_extension'
+		'file_extension',
+		'boolean'
 	];
 
 	var color = [
