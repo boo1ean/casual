@@ -1,5 +1,5 @@
 declare module "casual" {
-
+  
   interface generators {
     // EMBEDDED GENERATORS
     _country(): string;         // 'United Kingdom'
@@ -70,7 +70,7 @@ declare module "casual" {
 
     _card_type(): string;             // 'American Express'
     _card_exp(): string;              // '03/04'
-    _card_data(): {type: string, number: string, exp: string, holder_name: string};             // { type: 'MasterCard', number: '5307558778577046', exp: '04/88', holder_name: 'Jaron Gibson' }
+    _card_data(): { type: string, number: string, exp: string, holder_name: string };             // { type: 'MasterCard', number: '5307558778577046', exp: '04/88', holder_name: 'Jaron Gibson' }
 
     // Misc
 
@@ -158,7 +158,7 @@ declare module "casual" {
 
     card_type(): string;             // 'American Express'
     card_exp(): string;              // '03/04'
-    card_data(): {type: string, number: string, exp: string, holder_name: string};             // { type: 'MasterCard', number: '5307558778577046', exp: '04/88', holder_name: 'Jaron Gibson' }
+    card_data(): { type: string, number: string, exp: string, holder_name: string };             // { type: 'MasterCard', number: '5307558778577046', exp: '04/88', holder_name: 'Jaron Gibson' }
 
     // Misc
 
@@ -259,7 +259,7 @@ declare module "casual" {
     card_type: string;             // 'American Express'
     card_number(vendor?: string): string;   // '4716506247152101' (if no vendor specified then random)
     card_exp: string;              // '03/04'
-    card_data: {type: string, number: string, exp: string, holder_name: string};             // { type: 'MasterCard', number: '5307558778577046', exp: '04/88', holder_name: 'Jaron Gibson' }
+    card_data: { type: string, number: string, exp: string, holder_name: string };             // { type: 'MasterCard', number: '5307558778577046', exp: '04/88', holder_name: 'Jaron Gibson' }
 
     // Misc
 
@@ -293,8 +293,8 @@ declare module "casual" {
 
     // GENERATORS functions
     functions(): functions;
-}
-
-  export const casual: generators & casual;
-
+  }
+  
+  const casual: generators & casual;
+  export = casual;
 }
