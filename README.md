@@ -127,6 +127,10 @@ casual.card_data            // { type: 'MasterCard', number: '5307558778577046',
 casual.country_code    // 'ES'
 casual.language_code   // 'ru'
 casual.locale          // 'hi_IN'
+casual.currency				 // { symbol: 'R', name: 'South African Rand', symbol_native: 'R', decimal_digits: 2, rounding: 0, code: 'ZAR', name_plural: 'South African rand' }		
+casual.currency_code	 // 'TRY'
+casual.currency_symbol // 'TL'
+casual.currency_name   // Turkish Lira
 casual.mime_type       // 'audio/mpeg'
 casual.file_extension  // 'rtf'
 casual.boolean         // true
@@ -329,7 +333,7 @@ There is a simple cli util which could be used to view/debug providers output:
 
 	 # Will render table with columns [generator_name, result] only for person provider
 	node utils/show.js person
-	
+
 ## Browserify support
 
 Currently you can't use casual with browserify. Please check out this browserify-friendly fork [Klowner/casual-browserify](https://github.com/Klowner/casual-browserify)
