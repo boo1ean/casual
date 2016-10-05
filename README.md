@@ -127,8 +127,8 @@ casual.card_data            // { type: 'MasterCard', number: '5307558778577046',
 casual.country_code    // 'ES'
 casual.language_code   // 'ru'
 casual.locale          // 'hi_IN'
-casual.currency				 // { symbol: 'R', name: 'South African Rand', symbol_native: 'R', decimal_digits: 2, rounding: 0, code: 'ZAR', name_plural: 'South African rand' }		
-casual.currency_code	 // 'TRY'
+casual.currency        // { symbol: 'R', name: 'South African Rand', symbol_native: 'R', decimal_digits: 2, rounding: 0, code: 'ZAR', name_plural: 'South African rand' }		
+casual.currency_code   // 'TRY'
 casual.currency_symbol // 'TL'
 casual.currency_name   // Turkish Lira
 casual.mime_type       // 'audio/mpeg'
