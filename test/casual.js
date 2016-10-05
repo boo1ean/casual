@@ -112,6 +112,10 @@ describe('API', function() {
 		'country_code',
 		'language_code',
 		'locale',
+		'currency',
+		'currency_code',
+		'currency_symbol',
+		'currency_name',
 		'mime_type',
 		'file_extension',
 		'boolean'
@@ -255,7 +259,7 @@ describe('API', function() {
 
 				result = casual.letterify('1234');
 				re.test(result).should.be.false;
-				
+
 				result = casual.letterify('X123X');
 				re.test(result).should.be.false;
 			});
@@ -266,7 +270,6 @@ describe('API', function() {
 				casual.register_provider({
 					really_custom_generator: function() { return 'custom' }
 				});
-
 				casual.really_custom_generator.should.be.equal('custom');
 			});
 		});
