@@ -56,6 +56,7 @@ var build_casual = function() {
 		'uk_UA',
 		'nl_NL',
 		'en_CA',
+    'id_ID',
 		'it_CH',
 		'de_DE',
 		'ar_SY',
