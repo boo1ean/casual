@@ -1,5 +1,5 @@
-var helpers = require('./helpers'),
-		exists = require('fs').existsSync;
+var helpers = require('./helpers');
+var exists = require('fs').existsSync;
 
 var safe_require = function(filename) {
 	if (exists(filename + '.js')) {
