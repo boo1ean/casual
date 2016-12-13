@@ -1,5 +1,5 @@
-var helpers = require('./helpers'),
-    exists = require('fs').existsSync;
+var helpers = require('./helpers');
+var exists = require('fs').existsSync;
 
 var safe_require = function(filename) {
 	if (exists(filename + '.js')) {
@@ -56,6 +56,7 @@ var build_casual = function() {
 		'uk_UA',
 		'nl_NL',
 		'en_CA',
+		'id_ID',
 		'it_CH',
 		'de_DE',
 		'ar_SY',
