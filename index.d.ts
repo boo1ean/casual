@@ -289,7 +289,7 @@ declare module "casual" {
     register_provider(provider: Object): void;
 
     // SEEDING
-    seed(n: number);
+    seed(n: number): any;
 
     // GENERATORS functions
     functions(): functions;
