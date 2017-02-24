@@ -118,7 +118,8 @@ describe('API', function() {
 		'currency_name',
 		'mime_type',
 		'file_extension',
-		'boolean'
+		'boolean',
+		'uuid'
 	];
 
 	var color = [
