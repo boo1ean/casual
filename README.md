@@ -134,6 +134,7 @@ casual.currency_name   // Turkish Lira
 casual.mime_type       // 'audio/mpeg'
 casual.file_extension  // 'rtf'
 casual.boolean         // true
+casual.uuid            // '2f4dc6ba-bd25-4e66-b369-43a13e0cf150'
 
 // Colors
 
