@@ -79,6 +79,7 @@ declare module "casual" {
     _locale(): string;           // 'hi_IN'
     _mime_type(): string;        // 'audio/mpeg'
     _file_extension(): string;   // 'rtf'
+    _uuid(): string;             // '2f4dc6ba-bd25-4e66-b369-43a13e0cf150'
 
     // Colors
 
@@ -167,6 +168,7 @@ declare module "casual" {
     locale(): string;           // 'hi_IN'
     mime_type(): string;        // 'audio/mpeg'
     file_extension(): string;   // 'rtf'
+    uuid(): string              // '2f4dc6ba-bd25-4e66-b369-43a13e0cf150'
 
     // Colors
 
@@ -268,6 +270,7 @@ declare module "casual" {
     locale: string;           // 'hi_IN'
     mime_type: string;        // 'audio/mpeg'
     file_extension: string;   // 'rtf'
+    uuid: string;             // '2f4dc6ba-bd25-4e66-b369-43a13e0cf150'
 
     // Colors
 
