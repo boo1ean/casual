@@ -22,7 +22,7 @@ describe('API', function() {
 				}
 			}
 
-			done('Fail');
+			done(new Error('Fail'));
 		});
 	};
 
@@ -210,7 +210,7 @@ describe('API', function() {
 					}
 				}
 
-				done('Fail');
+				done(new Error('Fail'));
 			});
 		});
 
@@ -221,7 +221,7 @@ describe('API', function() {
 					return done();
 				}
 
-				done('Fail');
+				done(new Error('Fail'));
 			});
 		});
 
@@ -232,7 +232,7 @@ describe('API', function() {
 					return done();
 				}
 
-				done('Fail');
+				done(new Error('Fail'));
 			});
 		});
 
