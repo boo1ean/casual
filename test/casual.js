@@ -52,7 +52,8 @@ describe('API', function() {
 		'word',
 		'words',
 		'array_of_words',
-		'letter'
+		'letter',
+		'letter_phonetic'
 	];
 
 	var internet = [
