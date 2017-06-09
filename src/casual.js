@@ -58,6 +58,7 @@ var build_casual = function() {
 		'en_CA',
 		'id_ID',
 		'it_CH',
+    'it_IT',
 		'de_DE',
 		'ar_SY',
 		'pt_BR',
