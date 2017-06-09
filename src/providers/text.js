@@ -45,6 +45,13 @@ var provider = {
 
 	letters: 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM',
 
+	phonetics: [
+		'Alfa', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel',
+		'India', 'Juliett', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa',
+		'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey',
+		'X-ray', 'Yankee', 'Zulu'
+	],
+
 	title: function() {
 		return first_letter_up(this.words(this.integer(2, 3)));
 	},
@@ -101,6 +108,10 @@ var provider = {
 
 	letter: function() {
 		return this.random_element(this.letters);
+	},
+
+	letter_phonetic: function() {
+		return this.random_element(this.phonetics);
 	}
 };
 
