@@ -80,11 +80,11 @@ var provider = {
   ],
 
   address1_formats: [
-		'Bâtiment X',
+    'Bâtiment X',
     'Appartement ##',
-	],
+  ],
 
-	address2_formats: [
+  address2_formats: [
     '{{building_number}} {{street}}',
   ],
 
@@ -94,8 +94,8 @@ var provider = {
   ],
 
   zip: function() {
-		return this.numerify(this.random_element(this.zip_formats));
-	},
+    return this.numerify(this.random_element(this.zip_formats));
+  },
 
   address1: function() {
     return this.numerify(this.letterify(this.random_element(this.address1_formats)));
@@ -106,24 +106,24 @@ var provider = {
   },
 
   address: function() {
-		return this.numerify(this.populate_one_of(this.address_formats));
-	},
+    return this.numerify(this.populate_one_of(this.address_formats));
+  },
 
-	city: function() {
-		return this.random_element(this.cities);
-	},
+  city: function() {
+    return this.random_element(this.cities);
+  },
 
   street_prefix: function() {
-		return this.random_element(this.street_prefixes);
-	},
+    return this.random_element(this.street_prefixes);
+  },
 
   street_suffix: function() {
     return this.random_element(this.street_suffixes);
   },
 
-	street: function() {
-		return this.populate_one_of(this.street_formats);
-	},
+  street: function() {
+    return this.populate_one_of(this.street_formats);
+  },
 };
 
 module.exports = provider;

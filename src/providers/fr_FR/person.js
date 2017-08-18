@@ -130,10 +130,10 @@ var provider = {
   ],
 
   username: function() {
-		return this.letterify(
+    return this.letterify(
       this.populate_one_of(this.username_formats)
     ).toLowerCase();
-	},
+  },
 
   username: function() {
     return this.letterify(
