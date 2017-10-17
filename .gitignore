@@ -1,2 +1,6 @@
 node_modules
 yarn.lock
+
+# see discussions like https://github.com/hapijs/contrib/issues/114
+package-lock.json
+.vscode
