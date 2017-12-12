@@ -64,6 +64,7 @@ var build_casual = function() {
 		'ar_SY',
 		'pt_BR',
 		'nb_NO',
+		'ro_RO',
 		'sv_SE',
 	];
 
