@@ -66,6 +66,7 @@ var build_casual = function() {
 		'nb_NO',
 		'ro_RO',
 		'sv_SE',
+		'ja_JP',
 	];
 
 	locales.forEach(casual.register_locale);
