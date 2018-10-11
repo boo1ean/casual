@@ -66,6 +66,7 @@ var build_casual = function() {
 		'nb_NO',
 		'ro_RO',
 		'sv_SE',
+		'bg_BG',
 	];
 
 	locales.forEach(casual.register_locale);
