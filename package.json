@@ -1,6 +1,6 @@
 {
   "name": "casual",
-  "version": "1.5.19",
+  "version": "1.6.0",
   "description": "Fake data generator",
   "main": "src/casual.js",
   "scripts": {
@@ -27,9 +27,9 @@
     "moment": "^2.15.2"
   },
   "devDependencies": {
+    "mocha": "^5.2.0",
+    "realist": "~0.2.5",
     "should": "~3.1.2",
-    "mocha": "~1.17.1",
-    "text-table": "~0.2.0",
-    "realist": "~0.2.5"
+    "text-table": "~0.2.0"
   }
 }
