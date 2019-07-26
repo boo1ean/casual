@@ -36,10 +36,10 @@ var provider = {
     ],
 
     username_formats: [
-        '{{last_name}}.{{first_name}}',
-        '{{first_name}}.{{last_name}}',
-        '{{first_name}}_{{last_name}}',
-        '{{last_name}}_{{first_name}}'
+        '{{last_name_female}}.{{first_name_female}}',
+        '{{first_name_male}}.{{last_name_male}}',
+        '{{first_name_female}}_{{last_name_female}}',
+        '{{last_name_male}}_{{first_name_male}}'
     ],
 
     prefixes: ['Ing.', 'Ing. arch.', 'Bc.', 'MUDr.', 'Mgr.', 'JUDr.', 'PhDr.', 'prof.'],
@@ -110,7 +110,7 @@ var provider = {
     },
 
     last_name: function() {
-        if (this.integer % 2) {
+        if (this.integer(0, 1) % 2) {
             return this.last_name_male;
         }
 
