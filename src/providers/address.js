@@ -60,12 +60,12 @@ var provider = {
 		}
 	},
 	
-	zip5: function() {
+	zip_short: function() {
 		return this.numerify(this.zip_formats[0]);
 	},
 
-	zip9: function() {
-		return this.numerify(this.zip_formats[1]);
+	zip_long: function() {
+		return this.numerify(this.zip_formats[this.zip_formats.length - 1]);
 	},
 
 	street_suffix: function() {
