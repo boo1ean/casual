@@ -41,7 +41,9 @@ Casual uses javascript properties for common generators so you don't need to use
 
 casual.country              // 'United Kingdom'
 casual.city                 // 'New Ortiz chester'
-casual.zip(digits = {5, 9}) // '26995-7979' (if no digits specified then random selection between ZIP and ZIP+4)
+casual.zip(digits = {5, 9}) // '26995-7979' or '26995' (if no digits specified then random selection between ZIP and ZIP+4)
+casual.zip5                 // '26995'
+casual.zip9                 // '26995-7979'
 casual.street               // 'Jadyn Islands'
 casual.address              // '6390 Tremblay Pines Suite 784'
 casual.address1             // '8417 Veda Circles'
