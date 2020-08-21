@@ -35,7 +35,7 @@ var provider = {
 		return this.random_element(this.cities);
 	},
 
-	zip: function(digits) {
+	zip: function(digits=0) {
 		if (digits === 5) {
 			return this.numerify(this.zip_formats[0]);
 		} else if (digits === 9) {
