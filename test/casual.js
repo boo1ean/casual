@@ -344,6 +344,11 @@ describe('API', function() {
 		it('Should have getter function at _{name}', function() {
 			providers.forEach(check_getters);
 		});
+		
+		it('zip should not be a function', function() {
+			const type = typeof casual.zip;
+			type.should.not.eql('function');
+		});
 
 		it('Should return only funtions interface', function() {
 			var functions = casual.functions();
