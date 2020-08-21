@@ -181,7 +181,9 @@ declare namespace Casual {
     // EMBEDDED GENERATORS
     country: string;         // 'United Kingdom'
     city: string;            // 'New Ortiz chester'
-    zip(digits: Object): string; // '26995-7979' (if no digits specified then random selection between ZIP and ZIP+4)
+    zip(digits?: number): string; // '26995-7979' (if no digits specified then random selection between ZIP and ZIP+4)
+    zip_short: string;            // '26995'
+    zip_long: string              // '26995-7979'
     street: string;               // 'Jadyn Islands'
     address: string;              // '6390 Tremblay Pines Suite 784'
     address1: string;             // '8417 Veda Circles'

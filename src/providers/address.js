@@ -50,7 +50,7 @@ var provider = {
 		return this.populate_one_of(this.city_formats);
 	},
 
-	zip: function(digits) {
+	zip: function(digits=0) {
 		if (digits === 5) {
 			return this.numerify(this.zip_formats[0]);
 		} else if (digits === 9) {
@@ -58,6 +58,14 @@ var provider = {
 		} else {
 			return this.numerify(this.random_element(this.zip_formats));
 		}
+	},
+	
+	zip_short: function() {
+		return this.numerify(this.zip_formats[0]);
+	},
+
+	zip_long: function() {
+		return this.numerify(this.zip_formats[this.zip_formats.length - 1]);
 	},
 
 	street_suffix: function() {
