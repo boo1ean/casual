@@ -181,7 +181,7 @@ declare namespace Casual {
     // EMBEDDED GENERATORS
     country: string;         // 'United Kingdom'
     city: string;            // 'New Ortiz chester'
-    zip(digits: Object): string; // '26995-7979' (if no digits specified then random selection between ZIP and ZIP+4)
+    zip(digits?: 5 | 9): string; // '26995-7979' (if no digits specified then random selection between ZIP and ZIP+4)
     street: string;               // 'Jadyn Islands'
     address: string;              // '6390 Tremblay Pines Suite 784'
     address1: string;             // '8417 Veda Circles'
@@ -282,16 +282,16 @@ declare namespace Casual {
     define(type: string, cb: (...args: any[]) => any): void;
 
     // HELPERS
-    random_element(elements: Array<any>): any;
-    random_value(obj: Object): any;
-    random_key(obj: Object): any;
+    random_element<T>(elements: Array<T>): T;
+    random_value<K extends string | number | symbol, V>(obj: { [key in K]: V }): V;
+    random_key<K extends string | number | symbol, V>(obj: { [key in K]: V }): K;
     populate(str: string): string;
     populate_one_of(arr: Array<string>): string;
     numerify(format: string): string;
     register_provider(provider: Object): void;
 
     // SEEDING
-    seed(n: number): any;
+    seed(n: number): void;
 
     // GENERATORS functions
     functions(): functions;
