@@ -1,3 +1,5 @@
+import { Moment } from 'moment';
+
 declare namespace Casual {
   interface Generators {
     // EMBEDDED GENERATORS
@@ -49,12 +51,12 @@ declare namespace Casual {
     // numbers
 
     _random(): number;                       // 0.7171590146608651 (core generator)
-    _coin_flip(): Boolean;                     // true
+    _coin_flip(): Boolean;                   // true
 
     // Date
 
-    _unix_time(): number;                   // 659897901
-    _moment(): any;                      // moment.js object see http://momentjs.com/docs/
+    _unix_time(): number;                    // 659897901
+    _moment(): Moment;                       // moment.js object see http://momentjs.com/docs/
     _century(): string;                      // 'IV'
     _am_pm(): string;                        // 'am'
     _day_of_year(): number;                  // 323
@@ -62,7 +64,7 @@ declare namespace Casual {
     _day_of_week(): number;                  // 4
     _month_number(): number;                 // 9
     _month_name(): string;                   // 'March'
-    _year(): number;                     // 1990
+    _year(): number;                         // 1990
     _timezone(): string;                     // 'America/Miquelon'
 
     // Payments
@@ -142,8 +144,8 @@ declare namespace Casual {
 
     // Date
 
-    unix_time(): number;                   // 659897901
-    moment(): any;                      // moment.js object see http://momentjs.com/docs/
+    unix_time(): number;                    // 659897901
+    moment(): Moment;                       // moment.js object see http://momentjs.com/docs/
     century(): string;                      // 'IV'
     am_pm(): string;                        // 'am'
     day_of_year(): number;                  // 323
@@ -151,7 +153,7 @@ declare namespace Casual {
     day_of_week(): number;                  // 4
     month_number(): number;                 // 9
     month_name(): string;                   // 'March'
-    year(): number;                     // 1990
+    year(): number;                         // 1990
     timezone(): string;                     // 'America/Miquelon'
 
     // Payments
@@ -241,10 +243,10 @@ declare namespace Casual {
 
     // Date
 
-    unix_time: number;                   // 659897901
-    moment: any;                      // moment.js object see http://momentjs.com/docs/
-    date(format?: string): string;  // '2001-07-06' (see available formatters http://momentjs.com/docs/#/parsing/string-format/)
-    time(format?: string): string;    // '03:08:02' (see available formatters http://momentjs.com/docs/#/parsing/string-format/)
+    unix_time: number;                    // 659897901
+    moment: Moment;                       // moment.js object see http://momentjs.com/docs/
+    date(format?: string): string;        // '2001-07-06' (see available formatters http://momentjs.com/docs/#/parsing/string-format/)
+    time(format?: string): string;        // '03:08:02' (see available formatters http://momentjs.com/docs/#/parsing/string-format/)
     century: string;                      // 'IV'
     am_pm: string;                        // 'am'
     day_of_year: number;                  // 323
@@ -252,7 +254,7 @@ declare namespace Casual {
     day_of_week: number;                  // 4
     month_number: number;                 // 9
     month_name: string;                   // 'March'
-    year: number;                     // 1990
+    year: number;                         // 1990
     timezone: string;                     // 'America/Miquelon'
 
     // Payments
@@ -282,16 +284,16 @@ declare namespace Casual {
     define(type: string, cb: (...args: any[]) => any): void;
 
     // HELPERS
-    random_element(elements: Array<any>): any;
-    random_value(obj: Object): any;
-    random_key(obj: Object): any;
+    random_element<T>(elements: Array<T>): T;
+    random_value<T>(obj: Record<string, T>): T;
+    random_key(obj: Record<string, unknown>): string;
     populate(str: string): string;
     populate_one_of(arr: Array<string>): string;
     numerify(format: string): string;
     register_provider(provider: Object): void;
 
     // SEEDING
-    seed(n: number): any;
+    seed(n: number): void;
 
     // GENERATORS functions
     functions(): functions;
