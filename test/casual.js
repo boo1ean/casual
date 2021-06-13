@@ -200,7 +200,7 @@ describe('API', function() {
 			});
 		});
 
-		describe.only('array_of', function() {
+		describe('array_of', function() {
 			it("Should generate an array of results", function(done) {
 				var array = ["test", "test", "test"];
 				var result = casual.array_of(3, function() {return "test"});
