@@ -282,7 +282,7 @@ declare namespace Casual {
     define(type: string, cb: (...args: any[]) => any): void;
 
     // HELPERS
-    array_of<T>(x: number, gen: ()=>T): T;
+    array_of<T>(x: number, gen: ()=>T): T[];
     random_element<T>(elements: Array<T>): T;
     random_value<K extends string | number | symbol, V>(obj: { [key in K]: V }): V;
     random_key<K extends string | number | symbol, V>(obj: { [key in K]: V }): K;
