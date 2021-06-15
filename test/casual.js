@@ -200,6 +200,18 @@ describe('API', function() {
 			});
 		});
 
+		describe('array_of', function() {
+			it("Should generate an array of results", function(done) {
+				var array = ["test", "test", "test"];
+				var result = casual.array_of(3, function() {return "test"});
+
+				result.should.have.length(3);
+				result.should.containDeep(array);
+
+				return done();
+			});
+		});
+
 		describe('random_element', function() {
 			it('Should pick random element from array', function(done) {
 				var array = [1,2,3,4,5,23,6,7,8,95,43];

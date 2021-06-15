@@ -1,5 +1,16 @@
 var number = require('./providers/number');
 
+
+var array_of = function(times, generator) {
+	var result = [];
+
+	for (var i = 0; i < times; ++i) {
+		result.push(generator());
+	}
+
+	return result;
+};
+
 var random_element = function(array) {
 	var index = this.integer(0, array.length - 1);
 	return array[index];
@@ -71,6 +82,7 @@ var populate_one_of = function(formats) {
 };
 
 module.exports = {
+	array_of: array_of,
 	random_element: random_element,
 	random_value: random_value,
 	random_key: random_key,
