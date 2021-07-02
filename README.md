@@ -1,5 +1,9 @@
 ## Fake data generator [![Build Status](https://travis-ci.org/boo1ean/casual.svg?branch=master)](https://travis-ci.org/boo1ean/casual)
 
+## LOOKING FOR CONTRIBUTORS
+
+https://github.com/boo1ean/casual/issues/109
+
 ## Installation
 
 > npm install casual
