@@ -1483,7 +1483,7 @@ var provider = {
 		'video/x-msvideo': 'avi',
 		'video/x-sgi-movie': 'movie'
 	},
-	
+
 	animals: [
 		"alligator",
 		"alpaca",
@@ -1641,7 +1641,11 @@ var provider = {
 			return a ? (a ^ number.random() * 16 >> a / 4).toString(16) : ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, b);
 		}))();
 	},
-	
+
+	MongoObjectIdStr: function () {
+		return Array.from({length: 24}).map(() => Math.floor(number.random() * 16).toString(16)).join('')
+	},
+
 	animal: function () {
 		return this.random_element(this.animals);
 	}

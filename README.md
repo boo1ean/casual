@@ -128,17 +128,18 @@ casual.card_data            // { type: 'MasterCard', number: '5307558778577046',
 
 // Misc
 
-casual.country_code    // 'ES'
-casual.language_code   // 'ru'
-casual.locale          // 'hi_IN'
-casual.currency        // { symbol: 'R', name: 'South African Rand', symbol_native: 'R', decimal_digits: 2, rounding: 0, code: 'ZAR', name_plural: 'South African rand' }		
-casual.currency_code   // 'TRY'
-casual.currency_symbol // 'TL'
-casual.currency_name   // Turkish Lira
-casual.mime_type       // 'audio/mpeg'
-casual.file_extension  // 'rtf'
-casual.boolean         // true
-casual.uuid            // '2f4dc6ba-bd25-4e66-b369-43a13e0cf150'
+casual.country_code     // 'ES'
+casual.language_code    // 'ru'
+casual.locale           // 'hi_IN'
+casual.currency         // { symbol: 'R', name: 'South African Rand', symbol_native: 'R', decimal_digits: 2, rounding: 0, code: 'ZAR', name_plural: 'South African rand' }
+casual.currency_code    // 'TRY'
+casual.currency_symbol  // 'TL'
+casual.currency_name    // Turkish Lira
+casual.mime_type        // 'audio/mpeg'
+casual.file_extension   // 'rtf'
+casual.boolean          // true
+casual.uuid             // '2f4dc6ba-bd25-4e66-b369-43a13e0cf150'
+casual.MongoObjectIdStr // '2a5d1ce1bab2530a76cd936ce'
 
 // Colors
 
