@@ -91,7 +91,8 @@ casual.name_suffix     // 'Jr.'
 casual.company_name    // 'Cole, Wuckert and Strosin'
 casual.company_suffix  // 'Inc'
 casual.catch_phrase    // 'Synchronised optimal concept'
-casual.phone           // '982-790-2592'
+casual.phone           // '071-0000-0000'
+casual.mobile           // '0900-000-0000'
 
 // Numbers
 

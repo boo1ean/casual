@@ -65,6 +65,9 @@ var provider = {
 	phone: function() {
 		return this.numerify(this.random_element(this.phone_formats));
 	},
+	mobile: function() {
+		return this.numerify(this.random_element(this.mobile_formats));
+	},
 
 	name_prefix: function() {
 		return this.random_element(this.prefix);
