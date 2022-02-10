@@ -1,54 +1,29 @@
 provider = {
 
-	safe_color_names: [
-		'سیاه', 'maroon', 'سبز', 'navy', 'olive',
-		'purple', 'teal', 'lime', 'آبی', 'نقره ای',
-		'قهوه ای', 'زرد', 'fuchsia', 'aqua', 'سفید'
-	],
+    main_color_names: [
+        'قرمز', 'زرد', 'آبی', 'سبز', 'نارنجی',
+        'بنفش',
+    ],
 
-	color_names: [
-		'AliceBlue', 'AntiqueWhite', 'Aqua', 'Aquamarine',
-		'Azure', 'Beige', 'Bisque', 'Black', 'BlanchedAlmond',
-		'Blue', 'BlueViolet', 'Brown', 'BurlyWood', 'CadetBlue',
-		'Chartreuse', 'Chocolate', 'Coral', 'CornflowerBlue',
-		'Cornsilk', 'Crimson', 'Cyan', 'DarkBlue', 'DarkCyan',
-		'DarkGoldenRod', 'DarkGray', 'DarkGreen', 'DarkKhaki',
-		'DarkMagenta', 'DarkOliveGreen', 'Darkorange', 'DarkOrchid',
-		'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue',
-		'DarkSlateGray', 'DarkTurquoise', 'DarkViolet', 'DeepPink',
-		'DeepSkyBlue', 'DimGray', 'DimGrey', 'DodgerBlue', 'FireBrick',
-		'FloralWhite', 'ForestGreen', 'Fuchsia', 'Gainsboro', 'GhostWhite',
-		'Gold', 'GoldenRod', 'Gray', 'Green', 'GreenYellow', 'HoneyDew',
-		'HotPink', 'IndianRed ', 'Indigo ', 'Ivory', 'Khaki', 'Lavender',
-		'LavenderBlush', 'LawnGreen', 'LemonChiffon', 'LightBlue', 'LightCoral',
-		'LightCyan', 'LightGoldenRodYellow', 'LightGray', 'LightGreen', 'LightPink',
-		'LightSalmon', 'LightSeaGreen', 'LightSkyBlue', 'LightSlateGray', 'LightSteelBlue',
-		'LightYellow', 'Lime', 'LimeGreen', 'Linen', 'Magenta', 'Maroon', 'MediumAquaMarine',
-		'MediumBlue', 'MediumOrchid', 'MediumPurple', 'MediumSeaGreen', 'MediumSlateBlue',
-		'MediumSpringGreen', 'MediumTurquoise', 'MediumVioletRed', 'MidnightBlue',
-		'MintCream', 'MistyRose', 'Moccasin', 'NavajoWhite', 'Navy', 'OldLace', 'Olive',
-		'OliveDrab', 'Orange', 'OrangeRed', 'Orchid', 'PaleGoldenRod', 'PaleGreen',
-		'PaleTurquoise', 'PaleVioletRed', 'PapayaWhip', 'PeachPuff', 'Peru', 'Pink', 'Plum',
-		'PowderBlue', 'Purple', 'Red', 'RosyBrown', 'RoyalBlue', 'SaddleBrown', 'Salmon',
-		'SandyBrown', 'SeaGreen', 'SeaShell', 'Sienna', 'Silver', 'SkyBlue', 'SlateBlue',
-		'SlateGray', 'Snow', 'SpringGreen', 'SteelBlue', 'Tan', 'Teal', 'Thistle', 'Tomato',
-		'Turquoise', 'Violet', 'Wheat', 'White', 'WhiteSmoke', 'Yellow', 'YellowGreen'
-	],
+    color_names: [
+        'جگری','بژ تیره','حناییِ روشن','قهوه‌ایِ حنایی','کرم نارنجی','قرمز','زرشکی','شرابی','عنابی تند','صورتی','صورتی پررنگ','شرابی روشن','سرخابی','شفقی','ارغوانی','نارنجی کرم','نارنجی','نارنجی سیر','نارنجی پررنگ','قرمز گوجه‌ای','قرمز-نارنجی','شیری','شیرشکری','لیمویی روشن','هلویی روشن','هلویی','هلویی پررنگ','نخودی','خاکی','زرد','کهربایی باز','ماشی','مغزپسته‌ای','سبز روشن','مغزپسته‌ای پررنگ','مغزپسته‌ای','سبز کمرنگ','سبز کدر','یشمی سیر','یشمی کمرنگ','سبز لجنی','سبز چمنی','خزه‌ای','خزه‌ای پررنگ','شویدی','سبز','سبز ارتشی','زیتونی','زیتونی سیر','سبز آووکادو','سبز دریایی','سبز دریایی تیره','سبز کبریتی روشن','سبز کبریتی تیره','سبز دودی','فیروزه‌ای','آبی آسمانی','فیروزه‌ای کدر','آبی دریایی','یشمی','سبز دریایی روشن','فیروزه‌ای تیره','فیروزه‌ای سیر','آبی کبریتی روشن','بنفش مایل به آبی','آبی کبریتی','آبی آسمانی سیر','آبی روشن','آبی کمرنگ','آبی کدر','نیلی متالیک','آبی لجنی','آبی متالیک روشن','نیلی','فیروزه‌ای فسفری','آبی','آبی سیر','سرمه‌ای','لاجوردی','آبی نفتی','نیلی کمرنگ','بادمجانی روشن','بنفش کدر','بنفش روشن','سرخابی','سرخابی روشن','ارکیده','ارکیده سیر','آبی بنفش','آبی فولادی','آبی-بنفش سیر','بنفش باز','ارکیده بنفش','مخملی','بنفش','آبی دودی','نیلی سیر','کاهی','کاهگلی','کرم','کرم سیر','گندمی','خاکی','برنزه کدر','بادمجانی','هلویی سیر','خردلی','ماشی سیر','بادامی سیر','عسلی پررنگ','کاکائویی','قهوه‌ای متوسط','قهوه‌ای','آلبالویی','سفید','صورتی محو','یشمی محو','سفید نعنائی','آبی محو','نیلی محو','سفید بنفشه','خاکستری محو','بژ باز','هِلی','بژ روشن','پوست پیازی','استخوانی','بژ تیره','کتانی','صورتی مات','بژ','خاکستری مات','نقره‌ای','توسی','خاکستری سیر','خاکستری','دودی','سربی','سربی تیره','لجنی تیره','سیاه',
 
-	color_name: function() {
-		return this.random_element(this.color_names);
-	},
+    ],
 
-	safe_color_name: function() {
-		return this.random_element(this.safe_color_names);
-	},
+    color_name: function () {
+        return this.random_element(this.color_names);
+    },
 
-	rgb_hex: function() {
-		return '#' + ('000000' + this.integer(0, 16777216).toString(16)).slice(-6);
-	},
+    main_color_name: function () {
+        return this.random_element(this.main_color_names);
+    },
 
-	rgb_array: function() {
-		return [this.integer(0, 255), this.integer(0, 255), this.integer(0, 255)];
-	}
+    rgb_hex: function () {
+        return '#' + ('000000' + this.integer(0, 16777216).toString(16)).slice(-6);
+    },
+
+    rgb_array: function () {
+        return [this.integer(0, 255), this.integer(0, 255), this.integer(0, 255)];
+    }
 }
 module.exports = provider;
