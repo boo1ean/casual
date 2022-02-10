@@ -187,7 +187,7 @@ otherwise it should be accessed as property `casual.profile`.
 You can get localized version of casual generator:
 
 ```javascript
-var casual = require('casual').ru_RU;
+var casual = require('casual').fa_IR;
 casual.street; // 'Бухарестская'
 ```
 
