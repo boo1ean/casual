@@ -69,7 +69,8 @@ var build_casual = function() {
 		'bg_BG',
 		'ja_JP',
 		'da_DK',
-		'cs_CZ'
+		'cs_CZ',
+		'es_ES'
 	];
 
 	locales.forEach(casual.register_locale);
