@@ -1,5 +1,5 @@
 var provider = {
-	provinces: ["Ontario","Quebec","Nova Scotia","New Brunswich","Manitoba","British Columbia","Prince Edward Island","Saskatchewan","Alberta","Newfoundland and Labrador","Northwest Territories","Yukon","Nunavut"],
+	provinces: ["Ontario","Quebec","Nova Scotia","New Brunswick","Manitoba","British Columbia","Prince Edward Island","Saskatchewan","Alberta","Newfoundland and Labrador","Northwest Territories","Yukon","Nunavut"],
 	province_abbr: ["ON","QC","NS","NB","MB","BC","PE","SK","AB","NL","NT","YT","NU"],
 	postal_code_format: ["X#X-#X#",'X#X#X#', 'X#X #X#'],
 	capital_cities: ["Toronto","Quebec City","Halifax","Fredericton","Winnipeg","Victoria","Charlottetown","Regina","Edmonton","St. John's","Yellowknife","Whitehorse","Iqaluit"],
