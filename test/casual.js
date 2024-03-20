@@ -120,7 +120,8 @@ describe('API', function() {
 		'mime_type',
 		'file_extension',
 		'boolean',
-		'uuid'
+		'uuid',
+		'MongoObjectIdStr'
 	];
 
 	var color = [
